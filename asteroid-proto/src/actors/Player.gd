@@ -1,5 +1,5 @@
 extends Actor
-
+class_name Player
 
 # Declare member variables here. Examples:
 var shoot_rock = preload('../BulletStone.tscn')
