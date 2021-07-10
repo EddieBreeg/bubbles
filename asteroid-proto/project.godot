@@ -14,10 +14,20 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/actors/Actor.gd"
 }, {
+"base": "Projectile",
+"class": "BulletStone",
+"language": "GDScript",
+"path": "res://src/projectiles/BulletStone.gd"
+}, {
 "base": "KinematicBody2D",
 "class": "Enemy",
 "language": "GDScript",
 "path": "res://src/actors/Enemy.gd"
+}, {
+"base": "Projectile",
+"class": "EnemyBullet",
+"language": "GDScript",
+"path": "res://src/projectiles/EnemyBullet.gd"
 }, {
 "base": "Actor",
 "class": "Planet",
@@ -36,7 +46,9 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "Actor": "",
+"BulletStone": "",
 "Enemy": "",
+"EnemyBullet": "",
 "Planet": "",
 "Player": "",
 "Projectile": ""
@@ -98,6 +110,7 @@ shoot_life={
 2d_physics/layer_5="rock"
 2d_physics/layer_6="life"
 2d_physics/layer_7="enemy_bulets"
+2d_physics/layer_8="items"
 
 [physics]
 

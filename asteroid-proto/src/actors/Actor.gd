@@ -7,14 +7,15 @@ signal die
 var moving_speed = 600
 var velocity: = Vector2(1, 0)
 var hp = 3
-export var max_hp = 10
+export var max_hp = 8
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	self.add_to_group('Actor')
 	pass # Replace with function body.
 
-
+# func _get_hp() -> int:
+# 	return hp
 
 func _take_damage(n: int) -> void:
 	print(n)

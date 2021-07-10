@@ -13,8 +13,9 @@ var can_fire = true
 
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+func _ready():
+	self.add_to_group('Enemy')
+
 	
 func shot_flame():
 	var shoot_instance = shoot_rock.instance()
@@ -26,6 +27,7 @@ func shot_flame():
 	# Display on screen
 	get_parent().add_child(shoot_instance)
 	
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -40,3 +42,8 @@ func _process(delta: float) -> void:
 
 func _on_Enemy_die():
 	queue_free()
+
+func _on_CollisionsDetector_body_entered(body):
+	print('Enter sun atmosphere')
+	if(body.is_in_group("Player")):
+		body._take_damage(1)
