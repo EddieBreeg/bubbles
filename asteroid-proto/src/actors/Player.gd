@@ -2,8 +2,9 @@ extends Actor
 class_name Player
 
 # Declare member variables here. Examples:
-var shoot_rock = preload('../BulletStone.tscn')
-
+var shoot_rock = preload('..//projectiles/BulletStone.tscn')
+var rock_count = 10
+var life_count = 10
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -28,7 +29,8 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("ui_down"):
 		velocity.y += moving_speed
 		
-	if Input.is_action_just_pressed("shoot_rock"):
+	if Input.is_action_just_pressed("shoot_rock") and rock_count:
+		rock_count -= 1
 		var shoot_instance = shoot_rock.instance()
 		shoot_instance.position = get_global_position()
 		shoot_instance.velocity = velocity

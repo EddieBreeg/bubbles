@@ -1,13 +1,17 @@
 extends RigidBody2D
 
+class_name Projectile
+
+export var projectile_speed = 1000 # we should add the current velocity of the player somehow
+export var velocity = Vector2(1,0)
+export var damage = 0
+
 signal hit
 
 
 # Declare member variables here. Examples:
-export var projectile_speed = 1000 # we should add the current velocity of the player somehow
 var life_time = 3
 
-export var velocity = Vector2(1,0)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -26,3 +30,4 @@ func self_destruct():
 func _on_BulletStone_body_entered(body: Node) -> void:
 	self.hide()
 	emit_signal('hit')
+
