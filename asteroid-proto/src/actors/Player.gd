@@ -23,6 +23,9 @@ func _ready():
 
 func _reset_life():
 	life_count = 10
+	
+func _add_rock(nb_of_rock):
+	rock_count += nb_of_rock
 
 
 func _physics_process(_delta: float) -> void:
