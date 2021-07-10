@@ -9,7 +9,8 @@
 
 [node name="main_scene" type="Node2D"]
 
-[node name="Background" parent="." instance=ExtResource( 2 )]
+[node name="Player" parent="." instance=ExtResource( 5 )]
+position = Vector2( -446.072, -0.103287 )
 
 [node name="Enemy2" parent="." instance=ExtResource( 4 )]
 position = Vector2( -235.713, -1589.75 )
@@ -22,9 +23,6 @@ position = Vector2( 3090.48, 456.36 )
 
 [node name="Enemy" parent="." instance=ExtResource( 4 )]
 position = Vector2( -2929.73, 314.396 )
-
-[node name="Player" parent="." instance=ExtResource( 5 )]
-position = Vector2( -446.072, -0.103287 )
 
 [node name="Planet" parent="." instance=ExtResource( 1 )]
 position = Vector2( 2703.79, -1218.62 )
@@ -40,3 +38,5 @@ scale = Vector2( 0.75, 0.75 )
 
 [node name="Rocks" parent="." instance=ExtResource( 6 )]
 position = Vector2( -885.031, 444.366 )
+
+[node name="Background" parent="." instance=ExtResource( 2 )]

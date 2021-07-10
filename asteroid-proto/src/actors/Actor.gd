@@ -14,7 +14,8 @@ func _ready():
 	self.add_to_group('Actor')
 	pass # Replace with function body.
 
-
+# func _get_hp() -> int:
+# 	return hp
 
 func _take_damage(n: int) -> void:
 	print(n)

@@ -4,9 +4,13 @@ class_name Player
 # Declare member variables here. Examples:
 var shoot_rock = preload('..//projectiles/BulletStone.tscn')
 var shoot_life = preload('..//projectiles/BulletLife.tscn')
-export var rock_count = 10
-export var life_count = 10
+var rock_count = 10
+var life_count = 10
 
+func _get_rock_count() -> int:
+	return rock_count
+func _get_life_count() -> int:
+	return life_count
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	self.add_to_group('Player')
@@ -50,6 +54,9 @@ func _physics_process(_delta: float) -> void:
 		shoot_instance.velocity = velocity
 		shoot_instance.rotation = get_angle_to(get_global_mouse_position())
 		get_parent().add_child(shoot_instance)
+
+# func _take_damage(n: int) -> void:
+# 	pass
 
 
 func _on_Player_die():

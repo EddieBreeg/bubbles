@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/asteroid2.png" type="Texture" id=1]
 [ext_resource path="res://src/actors/Player.gd" type="Script" id=2]
+[ext_resource path="res://src/UI.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/UI.gd" type="Script" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 157.667
@@ -9,6 +11,11 @@ radius = 157.667
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 14
 script = ExtResource( 2 )
+
+[node name="Jean_HUD" parent="." instance=ExtResource( 3 )]
+position = Vector2( -26.7269, -7.1272 )
+z_index = 10
+script = ExtResource( 4 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
