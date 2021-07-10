@@ -4,10 +4,10 @@
 [ext_resource path="res://src/actors/Motherland.gd" type="Script" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 309.138
+radius = 302.884
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 518.313
+radius = 418.307
 
 [node name="Motherland" type="KinematicBody2D"]
 collision_layer = 4

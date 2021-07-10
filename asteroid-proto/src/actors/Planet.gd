@@ -10,9 +10,15 @@ func _on_Planet_die():
 
 func _take_damage(n: int) -> void:
 	var player = get_parent().get_node('Player')
-	if player:
+	if(player):
 		player._update_score(-n if hp < max_hp else 0)
-	hp = hp - n if (hp-n)>0 else 0
-	hp = hp if hp < max_hp else max_hp
-	if not hp:
-		emit_signal('die')
+		hp = hp - n if (hp-n)>0 else 0
+		hp = hp if hp < max_hp else max_hp
+		if not hp:
+			emit_signal('die')
+		elif(hp < max_hp):
+			get_node("AnimatedSprite").play("default")
+		else:
+			get_node("AnimatedSprite").play("life")
+			
+
