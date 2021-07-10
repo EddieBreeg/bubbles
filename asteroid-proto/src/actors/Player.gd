@@ -64,5 +64,7 @@ func _take_damage(n: int) -> void:
 	rock_count = rock_count - n if (rock_count-n) > 0 else 0
 
 func _on_Player_die():
+	var keep_score = self.score
 	queue_free()
+	get_parent()._game_over(keep_score)
 

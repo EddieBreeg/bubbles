@@ -6,7 +6,7 @@
 [ext_resource path="res://src/UI.gd" type="Script" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 157.667
+radius = 133.907
 
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 14
