@@ -110,7 +110,6 @@ shoot_life={
 2d_physics/layer_5="rock"
 2d_physics/layer_6="life"
 2d_physics/layer_7="enemy_bulets"
-2d_physics/layer_8="items"
 
 [physics]
 

@@ -7,7 +7,7 @@ signal die
 var moving_speed = 600
 var velocity: = Vector2(1, 0)
 var hp = 3
-export var max_hp = 10
+export var max_hp = 5
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

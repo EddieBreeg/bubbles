@@ -27,7 +27,10 @@ func _reset_life():
 func _add_rock(nb_of_rock):
 	rock_count += nb_of_rock
 
-
+func _process(_delta):
+	if not rock_count:
+		emit_signal('die')
+		
 func _physics_process(_delta: float) -> void:
 	velocity.x = 0
 	velocity.y = 0
@@ -57,9 +60,8 @@ func _physics_process(_delta: float) -> void:
 		shoot_instance.rotation = get_angle_to(get_global_mouse_position())
 		get_parent().add_child(shoot_instance)
 
-# func _take_damage(n: int) -> void:
-# 	pass
-
+func _take_damage(n: int) -> void:
+	rock_count = rock_count - n if (rock_count-n) > 0 else 0
 
 func _on_Player_die():
 	queue_free()
