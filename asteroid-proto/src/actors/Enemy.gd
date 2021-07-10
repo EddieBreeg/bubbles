@@ -13,6 +13,7 @@ func _ready() -> void:
 func _on_BulletDetector_body_entered(body):
 	_take_damage(1)
 
+	
 
 func _take_damage(n: int) -> void:
 	hp -= n

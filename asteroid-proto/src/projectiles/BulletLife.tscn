@@ -1,14 +1,29 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://src/projectiles/Projectile.gd" type="Script" id=1]
+[ext_resource path="res://assets/life_ball.png" type="Texture" id=2]
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 17.7544
+height = 32.9095
 
 [node name="BulletLife" type="RigidBody2D"]
+collision_layer = 32
+collision_mask = 30
+gravity_scale = 0.0
+contacts_reported = 1
+contact_monitor = true
 script = ExtResource( 1 )
 damage = -1
 
 [node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0.0826454, -0.111356 )
+scale = Vector2( 0.441991, 0.441991 )
+texture = ExtResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+position = Vector2( 75.4032, 0.222725 )
+rotation = 1.5708
 shape = SubResource( 1 )
+
+[connection signal="body_entered" from="." to="." method="_on_Projectile_body_entered"]

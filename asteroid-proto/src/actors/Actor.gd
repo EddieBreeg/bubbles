@@ -19,5 +19,4 @@ func _process(delta):
 		queue_free()
 
 func _physics_process(delta: float) -> void:
-	move_and_slide(velocity)
-	
+	var collision = move_and_collide(velocity * delta)
