@@ -39,7 +39,6 @@ func _process(_delta):
 func _physics_process(_delta: float) -> void:
 	velocity.x = 0
 	velocity.y = 0
-	
 	if Input.is_action_pressed("ui_left"):
 		velocity.x -= moving_speed
 	if Input.is_action_pressed("ui_right"):
@@ -49,13 +48,16 @@ func _physics_process(_delta: float) -> void:
 		velocity.y -= moving_speed
 	if Input.is_action_pressed("ui_down"):
 		velocity.y += moving_speed
-		
+	var mousePos = get_global_mouse_position()
+	var projection = velocity.normalized().dot((mousePos - position).normalized())
+	
 	if Input.is_action_just_pressed("shoot_rock") and rock_count:
 		rock_count -= 1
 		var shoot_instance = shoot_rock.instance()
 		shoot_instance.position = get_global_position()
-		shoot_instance.velocity = velocity
-		shoot_instance.rotation = get_angle_to(get_global_mouse_position())
+		print(projection)
+		shoot_instance.velocity = projection * velocity
+		shoot_instance.rotation = get_angle_to(mousePos)
 		get_parent().add_child(shoot_instance)
 	if Input.is_action_just_pressed("shoot_life") and life_count:
 		life_count -= 1
