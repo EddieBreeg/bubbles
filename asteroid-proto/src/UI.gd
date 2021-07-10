@@ -10,6 +10,8 @@ extends Node2D
 func _process(_delta):
 	var player = get_parent()
 	var rocks = player._get_rock_count()
-	var lives = player._get_life_count()
 	get_node('RocksLabel').text = str(rocks)
+	var lives = player._get_life_count()
 	get_node('LivesLabel').text = str(lives)
+	var score = player._get_score()
+	get_node('ScoreLabel').text = "Score: " + str(score)

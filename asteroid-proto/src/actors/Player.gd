@@ -6,11 +6,16 @@ var shoot_rock = preload('..//projectiles/BulletStone.tscn')
 var shoot_life = preload('..//projectiles/BulletLife.tscn')
 var rock_count = 10
 var life_count = 10
+var score = 0
 
 func _get_rock_count() -> int:
 	return rock_count
 func _get_life_count() -> int:
 	return life_count
+func _get_score() -> int:
+	return score
+func _update_score(value: int) -> void:
+	score += value
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	self.add_to_group('Player')
@@ -19,9 +24,6 @@ func _ready():
 func _reset_life():
 	life_count = 10
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
 
 func _physics_process(_delta: float) -> void:
 	velocity.x = 0
@@ -58,3 +60,4 @@ func _physics_process(_delta: float) -> void:
 
 func _on_Player_die():
 	queue_free()
+
