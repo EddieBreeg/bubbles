@@ -4,11 +4,8 @@
 [ext_resource path="res://src/actors/Player.gd" type="Script" id=2]
 [ext_resource path="res://src/UI.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/UI.gd" type="Script" id=4]
-<<<<<<< HEAD
 [ext_resource path="res://assets/Musics/Givin' life loop.ogg" type="AudioStream" id=5]
-=======
 [ext_resource path="res://assets/flecheGps.png" type="Texture" id=5]
->>>>>>> 1e4c307aeddbfdbc72f5105b96d85d7b39d9ad29
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 157.667
