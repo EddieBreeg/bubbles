@@ -2,7 +2,7 @@ extends RigidBody2D
 
 class_name Projectile
 
-export var projectile_speed = 1000 # we should add the current velocity of the player somehow
+export var projectile_speed = 1000 
 export var velocity = Vector2(1,0)
 export var damage = 0
 
