@@ -1,6 +1,7 @@
 extends "res://src/actors/Actor.gd"
 class_name Enemy
 
+
 # Declare member variables here. Examples:
 var shoot_rock = preload('..//projectiles/BulletStone.tscn')
 
@@ -16,7 +17,10 @@ func shot_flame():
 	get_parent().add_child(shoot_instance)
 	
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	shot_flame()
 
+func _on_Enemy_die():
+	queue_free()

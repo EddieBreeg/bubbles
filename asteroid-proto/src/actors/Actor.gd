@@ -1,6 +1,7 @@
 extends KinematicBody2D
 class_name Actor
 
+signal die
 
 # Declare member variables here. Examples:
 var moving_speed = 600
@@ -12,17 +13,17 @@ var hp = 3
 func _ready():
 	pass # Replace with function body.
 
-func _on_BulletDetector_body_entered(body):
-	_take_damage(1)
 
 
 func _take_damage(n: int) -> void:
-	hp -= n
+	print(n)
+	hp = hp - n if (hp-n)>0 else 0
+	if not hp:
+		emit_signal('die')
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if(hp <= 0):
-		queue_free()
+	pass
 
 func _physics_process(delta: float) -> void:
 	var collision = move_and_collide(velocity * delta)
