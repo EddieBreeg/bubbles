@@ -1,4 +1,4 @@
-extends Planet
+extends KinematicBody2D
 
 
 # Declare member variables here. Examples:
@@ -15,7 +15,9 @@ func _ready():
 #func _process(delta):
 #	pass
 
-# Call for _reste_life of player when enter motherland's atmosphere
-func _on_Motherland_body_shape_entered(body_id, body, body_shape, local_shape):
-	if body.is_in_group("Player"):
-		body._reset_life()
+
+
+func _on_PickItems_body_shape_entered(body_id, body, body_shape, local_shape):
+	if(body.is_in_group("Player")):
+		body._add_rock(3)
+		self.queue_free()
