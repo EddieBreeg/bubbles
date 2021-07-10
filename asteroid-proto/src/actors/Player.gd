@@ -44,3 +44,7 @@ func _physics_process(_delta: float) -> void:
 		shoot_instance.velocity = velocity
 		shoot_instance.rotation = get_angle_to(get_global_mouse_position())
 		get_parent().add_child(shoot_instance)
+
+
+func _on_Player_die():
+	queue_free()
