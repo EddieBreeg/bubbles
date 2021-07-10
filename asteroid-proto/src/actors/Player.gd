@@ -30,6 +30,11 @@ func _add_rock(nb_of_rock):
 func _process(_delta):
 	if not rock_count:
 		emit_signal('die')
+	# GPS handling
+	var home = get_parent().get_node('Motherland')
+	var dToHome = (home.position - position).normalized()
+	var angle = acos(dToHome.x) * sign(dToHome.y)
+	get_node('GPS').rotation = angle
 		
 func _physics_process(_delta: float) -> void:
 	velocity.x = 0
