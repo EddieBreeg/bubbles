@@ -35,5 +35,6 @@ position = Vector2( -470.368, 485.745 )
 [node name="Player" parent="." instance=ExtResource( 5 )]
 position = Vector2( 56.7906, 197.45 )
 
-[node name="Node2D" parent="Player" instance=ExtResource( 1 )]
-position = Vector2( 281.114, -282.037 )
+[node name="Planet" parent="." instance=ExtResource( 1 )]
+position = Vector2( 337.905, -83.5869 )
+scale = Vector2( 1, 1 )
