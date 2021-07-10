@@ -1,5 +1,7 @@
 extends RigidBody2D
 
+signal hit
+
 
 # Declare member variables here. Examples:
 export var projectile_speed = 1000 # we should add the current velocity of the player somehow
@@ -23,3 +25,4 @@ func self_destruct():
 
 func _on_BulletStone_body_entered(body: Node) -> void:
 	self.hide()
+	emit_signal('hit')
