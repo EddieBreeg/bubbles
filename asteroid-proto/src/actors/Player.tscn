@@ -4,11 +4,7 @@
 [ext_resource path="res://src/actors/Player.gd" type="Script" id=2]
 [ext_resource path="res://src/UI.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/UI.gd" type="Script" id=4]
-<<<<<<< HEAD
 [ext_resource path="res://assets/Musics/loop.wav" type="AudioStream" id=5]
-=======
-[ext_resource path="res://assets/Musics/Givin' life loop.ogg" type="AudioStream" id=5]
->>>>>>> a81bec7f5086b159bc60da99426904a1e972980f
 [ext_resource path="res://assets/flecheGps.png" type="Texture" id=6]
 
 [sub_resource type="CircleShape2D" id=1]
@@ -34,13 +30,10 @@ texture = ExtResource( 1 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
-<<<<<<< HEAD
-=======
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
 autoplay = true
 
->>>>>>> a81bec7f5086b159bc60da99426904a1e972980f
 [node name="GPS" type="Node2D" parent="."]
 
 [node name="Arrow" type="Sprite" parent="GPS"]
@@ -49,12 +42,9 @@ position = Vector2( 184.023, 0.5 )
 scale = Vector2( 0.2761, 0.2761 )
 z_index = 2
 texture = ExtResource( 6 )
-<<<<<<< HEAD
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 5 )
 autoplay = true
-=======
->>>>>>> a81bec7f5086b159bc60da99426904a1e972980f
 
 [connection signal="die" from="." to="." method="_on_Player_die"]
