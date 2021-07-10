@@ -31,6 +31,9 @@ collision_mask = 29
 position = Vector2( -229.81, -60.7219 )
 shape = SubResource( 2 )
 
+[node name="Spawn" type="Node2D" parent="."]
+position = Vector2( 117.422, 0 )
+
 [connection signal="die" from="." to="." method="_on_Enemy_die"]
 [connection signal="body_entered" from="CollisionsDetector" to="." method="_on_BulletDetector_body_entered"]
 [connection signal="body_shape_entered" from="CollisionsDetector" to="." method="_on_BulletDetector_body_shape_entered"]

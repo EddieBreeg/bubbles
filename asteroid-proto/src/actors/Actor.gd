@@ -5,7 +5,7 @@ signal die
 
 # Declare member variables here. Examples:
 var moving_speed = 600
-var velocity: = Vector2(0, 0)
+var velocity: = Vector2(1, 0)
 var hp = 3
 
 

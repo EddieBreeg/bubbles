@@ -6,9 +6,9 @@
 [sub_resource type="CircleShape2D" id=1]
 radius = 22.8138
 
-[node name="BulletStone" type="RigidBody2D"]
-collision_layer = 16
-collision_mask = 126
+[node name="EnemyBullet" type="RigidBody2D"]
+collision_layer = 64
+collision_mask = 61
 gravity_scale = 0.0
 contacts_reported = 1
 contact_monitor = true
