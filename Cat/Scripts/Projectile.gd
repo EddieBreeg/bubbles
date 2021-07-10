@@ -1,7 +1,6 @@
 extends RigidBody2D
 
 
-
 export var speed = 500
 export var damage_value = 1
 

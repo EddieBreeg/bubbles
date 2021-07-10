@@ -18,7 +18,6 @@ func _process(_delta):
 	rotation = angle
 	if Input.is_action_just_pressed("shoot"):
 		var instance = projectile_scene.instance()
-		print(spwn.position)
 		instance.position = position + spwn.position.rotated(angle)
 		instance.rotation = angle
 
