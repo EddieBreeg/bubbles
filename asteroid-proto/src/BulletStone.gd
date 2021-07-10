@@ -5,9 +5,12 @@ extends RigidBody2D
 export var projectile_speed = 1000 # we should add the current velocity of the player somehow
 var life_time = 3
 
+export var velocity = Vector2(1,0)
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	apply_impulse(Vector2(), Vector2(projectile_speed,0).rotated(rotation))
+	velocity += projectile_speed*Vector2(1,0).rotated(rotation)
+	apply_impulse(Vector2(), velocity)
 	self_destruct()
 
 func self_destruct():

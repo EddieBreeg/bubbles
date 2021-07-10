@@ -31,6 +31,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("shoot_rock"):
 		var shoot_instance = shoot_rock.instance()
 		shoot_instance.position = get_global_position()
+		shoot_instance.velocity = velocity
 		shoot_instance.rotation = get_angle_to(get_global_mouse_position())
 		get_parent().add_child(shoot_instance)
 
