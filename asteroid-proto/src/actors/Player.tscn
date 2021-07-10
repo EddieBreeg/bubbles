@@ -32,6 +32,7 @@ shape = SubResource( 1 )
 [node name="GPS" type="Node2D" parent="."]
 
 [node name="Arrow" type="Sprite" parent="GPS"]
+modulate = Color( 1, 1, 1, 0.886275 )
 position = Vector2( 184.023, 0.5 )
 scale = Vector2( 0.2761, 0.2761 )
 z_index = 2
