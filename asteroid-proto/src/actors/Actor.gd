@@ -11,6 +11,7 @@ export var max_hp = 10
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	self.add_to_group('Actor')
 	pass # Replace with function body.
 
 

@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/actors/Planet.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Background.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/actors/Motherland.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/actors/Enemy.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/actors/Player.tscn" type="PackedScene" id=5]
 
@@ -9,28 +10,29 @@
 
 [node name="Background" parent="." instance=ExtResource( 2 )]
 
-[node name="Enemy" parent="." groups=[
-"Actor",
-] instance=ExtResource( 4 )]
-position = Vector2( -470.368, 485.745 )
+[node name="Enemy2" parent="." instance=ExtResource( 4 )]
+position = Vector2( -235.713, -1589.75 )
 
-[node name="Player" parent="." groups=[
-"Actor",
-] instance=ExtResource( 5 )]
-position = Vector2( 56.7906, 197.45 )
+[node name="Enemy3" parent="." instance=ExtResource( 4 )]
+position = Vector2( -1445.24, 2270.65 )
 
-[node name="Planet" parent="." groups=[
-"Actor",
-] instance=ExtResource( 1 )]
-position = Vector2( 1292.68, -704.576 )
+[node name="Enemy4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3090.48, 456.36 )
 
-[node name="Planet2" parent="." groups=[
-"Actor",
-] instance=ExtResource( 1 )]
-position = Vector2( -1394.93, -635.602 )
+[node name="Enemy" parent="." instance=ExtResource( 4 )]
+position = Vector2( -2929.73, 314.396 )
 
-[node name="Planet3" parent="." groups=[
-"Actor",
-] instance=ExtResource( 1 )]
-position = Vector2( 1019.18, 1366.91 )
+[node name="Player" parent="." instance=ExtResource( 5 )]
+position = Vector2( -446.072, -0.103287 )
+
+[node name="Planet" parent="." instance=ExtResource( 1 )]
+position = Vector2( 2703.79, -1218.62 )
+
+[node name="Planet2" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2926.99, -937.983 )
+
+[node name="Planet3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1422.35, 2425.24 )
 scale = Vector2( 0.75, 0.75 )
+
+[node name="Motherland" parent="." instance=ExtResource( 3 )]
