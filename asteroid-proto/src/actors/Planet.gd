@@ -10,7 +10,7 @@ func _on_Planet_die():
 
 func _take_damage(n: int) -> void:
 	var player = get_parent().get_node('Player')
-	player._update_score(-n)
+	player._update_score(-n if hp < max_hp else 0)
 	hp = hp - n if (hp-n)>0 else 0
 	hp = hp if hp < max_hp else max_hp
 	if not hp:
