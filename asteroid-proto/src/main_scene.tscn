@@ -13,21 +13,27 @@ scale = Vector2( 10, 10 )
 texture = ExtResource( 2 )
 
 [node name="Enemy" parent="." groups=[
-"EnemyGroup",
+"Actor",
 ] instance=ExtResource( 4 )]
 position = Vector2( -470.368, 485.745 )
 
 [node name="Player" parent="." groups=[
-"PlayerGroup",
+"Actor",
 ] instance=ExtResource( 5 )]
 position = Vector2( 56.7906, 197.45 )
 
-[node name="Planet" parent="." instance=ExtResource( 1 )]
+[node name="Planet" parent="." groups=[
+"Actor",
+] instance=ExtResource( 1 )]
 position = Vector2( 1292.68, -704.576 )
 
-[node name="Planet2" parent="." instance=ExtResource( 1 )]
+[node name="Planet2" parent="." groups=[
+"Actor",
+] instance=ExtResource( 1 )]
 position = Vector2( -1394.93, -635.602 )
 
-[node name="Planet3" parent="." instance=ExtResource( 1 )]
+[node name="Planet3" parent="." groups=[
+"Actor",
+] instance=ExtResource( 1 )]
 position = Vector2( 1019.18, 1366.91 )
 scale = Vector2( 0.75, 0.75 )
