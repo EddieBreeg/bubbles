@@ -1,23 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://assets/planetNormale1.png" type="Texture" id=1]
 [ext_resource path="res://src/actors/Planet.gd" type="Script" id=2]
-[ext_resource path="res://assets/planetNormaleVivante.png" type="Texture" id=3]
 
-[sub_resource type="SpriteFrames" id=1]
-animations = [ {
-"frames": [ ExtResource( 1 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ) ],
-"loop": true,
-"name": "life",
-"speed": 5.0
-} ]
-
-[sub_resource type="CircleShape2D" id=2]
+[sub_resource type="CircleShape2D" id=1]
 radius = 321.41
 
 [node name="Planet" type="KinematicBody2D"]
@@ -27,9 +12,8 @@ script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 1.24666, 1.24666 )
-frames = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [connection signal="die" from="." to="." method="_on_Planet_die"]
