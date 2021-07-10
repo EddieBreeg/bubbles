@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://src/actors/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/actors/Planet.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/milky_way.jpg" type="Texture" id=2]
 [ext_resource path="res://assets/jupiter.png" type="Texture" id=3]
 [ext_resource path="res://src/actors/Enemy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/actors/Player.tscn" type="PackedScene" id=5]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 93.7216
@@ -38,3 +39,9 @@ shape = SubResource( 1 )
 "EnemyGroup",
 ] instance=ExtResource( 4 )]
 position = Vector2( -470.368, 485.745 )
+
+[node name="Player" parent="." instance=ExtResource( 5 )]
+position = Vector2( 56.7906, 197.45 )
+
+[node name="Planet" parent="." instance=ExtResource( 1 )]
+position = Vector2( 337.905, -83.5869 )

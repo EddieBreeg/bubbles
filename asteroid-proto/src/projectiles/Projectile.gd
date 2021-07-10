@@ -27,7 +27,7 @@ func self_destruct():
 #func _process(delta):
 #	pass
 
-func _on_BulletStone_body_entered(body: Node) -> void:
+func _on_Projectile_body_entered(body: Node) -> void:
 	self.hide()
 	if body.is_in_group("EnemyGroup"):
 		print("Hit an enemy")
@@ -38,8 +38,3 @@ func _on_BulletStone_body_entered(body: Node) -> void:
 # 		print("Hit an enemy")
 # 	emit_signal('hit')
 
-
-func _on_Projectile_body_entered(body):
-	self.hide()
-	if body.is_in_group('EnemyGroup'):
-		emit_signal('hit', damage)

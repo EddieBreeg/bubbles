@@ -10,14 +10,6 @@ class_name Enemy
 func _ready() -> void:
 	pass # Replace with function body.
 
-func _on_BulletDetector_body_entered(body):
-	_take_damage(1)
-
-	
-
-func _take_damage(n: int) -> void:
-	hp -= n
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta: float) -> void:
 
