@@ -21,9 +21,6 @@ func _take_damage(n: int) -> void:
 	if not hp:
 		emit_signal('die')
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
 
 func _physics_process(delta: float) -> void:
-	var collision = move_and_collide(velocity * delta)
+	move_and_collide(velocity * delta)

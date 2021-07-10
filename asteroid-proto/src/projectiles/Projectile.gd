@@ -24,5 +24,5 @@ func self_destruct():
 func _on_Projectile_body_entered(body: Node) -> void:
 	get_node("Hitbox").set_deferred('disabled', true)
 	self.hide()
-	if body.is_in_group("EnemyGroup"):
+	if body.is_in_group("EnemyGroup") or body.is_in_group('PlayerGroup'):
 		body._take_damage(damage)
