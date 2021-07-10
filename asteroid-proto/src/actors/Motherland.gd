@@ -17,7 +17,7 @@ func _take_damage(n: int) -> void:
 #func _process(delta):
 #	pass
 
-# Call for _reste_life of player when enter motherland's atmosphere
+# Call for _reset_life of player when enter motherland's atmosphere
 func _on_Motherland_body_shape_entered(body_id, body, body_shape, local_shape):
 	if body.is_in_group("Player"):
 		body._reset_life()

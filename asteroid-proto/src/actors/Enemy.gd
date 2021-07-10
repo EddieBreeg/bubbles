@@ -29,6 +29,7 @@ func shot_flame():
 	
 
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if(can_fire):
@@ -41,3 +42,8 @@ func _process(delta: float) -> void:
 
 func _on_Enemy_die():
 	queue_free()
+
+func _on_CollisionsDetector_body_entered(body):
+	print('Enter sun atmosphere')
+	if(body.is_in_group("Player")):
+		body._take_damage(1)
