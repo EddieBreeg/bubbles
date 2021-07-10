@@ -16,3 +16,9 @@ func _take_damage(n: int) -> void:
 		hp = hp if hp < max_hp else max_hp
 		if not hp:
 			emit_signal('die')
+		elif(hp < max_hp):
+			get_node("AnimatedSprite").play("default")
+		else:
+			get_node("AnimatedSprite").play("life")
+			
+
