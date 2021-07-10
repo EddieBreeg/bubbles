@@ -10,7 +10,6 @@ export var damage = 0
 
 var life_time = 3
 
-
 func _ready():
 	velocity += projectile_speed*Vector2(1,0).rotated(rotation)
 	apply_impulse(Vector2(), velocity)
