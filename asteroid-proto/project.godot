@@ -20,14 +20,26 @@ _global_script_classes=[ {
 "path": "res://src/actors/Enemy.gd"
 }, {
 "base": "Actor",
+"class": "Planet",
+"language": "GDScript",
+"path": "res://src/actors/Planet.gd"
+}, {
+"base": "Actor",
 "class": "Player",
 "language": "GDScript",
 "path": "res://src/actors/Player.gd"
+}, {
+"base": "RigidBody2D",
+"class": "Projectile",
+"language": "GDScript",
+"path": "res://src/projectiles/Projectile.gd"
 } ]
 _global_script_class_icons={
 "Actor": "",
 "Enemy": "",
-"Player": ""
+"Planet": "",
+"Player": "",
+"Projectile": ""
 }
 
 [application]
@@ -85,6 +97,7 @@ shoot_life={
 2d_physics/layer_4="coliders"
 2d_physics/layer_5="rock"
 2d_physics/layer_6="life"
+2d_physics/layer_7="enemy_bulets"
 
 [physics]
 

@@ -1,12 +1,10 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://src/actors/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/actors/Planet.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/milky_way.jpg" type="Texture" id=2]
-[ext_resource path="res://assets/jupiter.png" type="Texture" id=3]
+[ext_resource path="res://src/actors/Motherland.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/actors/Enemy.tscn" type="PackedScene" id=4]
-
-[sub_resource type="CircleShape2D" id=1]
-radius = 93.7216
+[ext_resource path="res://src/actors/Player.tscn" type="PackedScene" id=5]
 
 [node name="main_scene" type="Node2D"]
 
@@ -15,22 +13,29 @@ position = Vector2( 1116.79, 646.18 )
 scale = Vector2( 10, 10 )
 texture = ExtResource( 2 )
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 172.181, 183.473 )
-scale = Vector2( 0.5, 0.5 )
+[node name="Enemy2" parent="." instance=ExtResource( 4 )]
+position = Vector2( -235.713, -1589.75 )
 
-[node name="Jupiter" type="KinematicBody2D" parent="."]
-collision_layer = 8
-collision_mask = 55
+[node name="Enemy3" parent="." instance=ExtResource( 4 )]
+position = Vector2( -1445.24, 2270.65 )
 
-[node name="jupiter" type="Sprite" parent="Jupiter"]
-position = Vector2( 544.56, 229.421 )
-scale = Vector2( 0.239388, 0.239388 )
-texture = ExtResource( 3 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Jupiter"]
-position = Vector2( 547.284, 228.925 )
-shape = SubResource( 1 )
+[node name="Enemy4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3090.48, 456.36 )
 
 [node name="Enemy" parent="." instance=ExtResource( 4 )]
-position = Vector2( -470.368, 485.745 )
+position = Vector2( -2929.73, 314.396 )
+
+[node name="Player" parent="." instance=ExtResource( 5 )]
+position = Vector2( -446.072, -0.103287 )
+
+[node name="Planet" parent="." instance=ExtResource( 1 )]
+position = Vector2( 2703.79, -1218.62 )
+
+[node name="Planet2" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2926.99, -937.983 )
+
+[node name="Planet3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1422.35, 2425.24 )
+scale = Vector2( 0.75, 0.75 )
+
+[node name="Motherland" parent="." instance=ExtResource( 3 )]
