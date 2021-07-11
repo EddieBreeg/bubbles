@@ -33,6 +33,7 @@ radius = 127.383
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 14
 script = ExtResource( 2 )
+projectile_speed = 820
 interpolation_fac = 0.066
 
 [node name="Jean_HUD" parent="." instance=ExtResource( 3 )]
