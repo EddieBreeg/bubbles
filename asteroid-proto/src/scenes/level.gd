@@ -1,7 +1,7 @@
 extends Node2D
 class_name Level
 
-export var timer = 100000000000000000000
+export var timer = 180
 export var start = 0
 export var timer_enabled = true
 
@@ -29,4 +29,6 @@ func _process(delta):
 		if(get_node('Player')):
 			get_node('Player')._die()
 
-
+func cleanup():
+	for p in get_tree().get_nodes_in_group('Projectile'):
+		p.queue_free()
