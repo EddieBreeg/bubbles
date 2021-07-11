@@ -29,4 +29,6 @@ func _process(delta):
 		if(get_node('Player')):
 			get_node('Player')._die()
 
-
+func cleanup():
+	for p in get_tree().get_nodes_in_group('Projectile'):
+		p.queue_free()
