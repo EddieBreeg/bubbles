@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://assets/characters/PlanetAnim/planetNormaleVivante4.png" type="Texture" id=1]
 [ext_resource path="res://src/actors/Planet.gd" type="Script" id=2]
@@ -10,7 +10,6 @@
 [ext_resource path="res://assets/characters/PlanetAnim/planetNormaleVivante5.png" type="Texture" id=8]
 [ext_resource path="res://assets/characters/PlanetAnim/planetNormaleVivante2.png" type="Texture" id=9]
 [ext_resource path="res://assets/characters/PlanetAnim/planetNormaleVivante6.png" type="Texture" id=10]
-[ext_resource path="res://assets/characters/planetNormaleCassee.png" type="Texture" id=11]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -23,11 +22,6 @@ animations = [ {
 "loop": true,
 "name": "life",
 "speed": 8.0
-}, {
-"frames": [ ExtResource( 11 ) ],
-"loop": true,
-"name": "broken",
-"speed": 5.0
 } ]
 
 [sub_resource type="CircleShape2D" id=2]

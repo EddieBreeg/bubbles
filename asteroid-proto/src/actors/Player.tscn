@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://assets/characters/asteroidAbime.png" type="Texture" id=1]
 [ext_resource path="res://src/actors/Player.gd" type="Script" id=2]
@@ -15,12 +15,24 @@
 [ext_resource path="res://assets/Musics/grab.wav" type="AudioStream" id=13]
 [ext_resource path="res://assets/upheavtt.ttf" type="DynamicFontData" id=14]
 [ext_resource path="res://assets/PixelFont.tres" type="DynamicFont" id=15]
+[ext_resource path="res://assets/characters/asteroidAbimeNoLife.png" type="Texture" id=16]
+[ext_resource path="res://assets/characters/asteroidNoLife.png" type="Texture" id=17]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 7 ) ],
 "loop": true,
 "name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 16 ) ],
+"loop": true,
+"name": "brokenNL",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ) ],
+"loop": true,
+"name": "defaultNL",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 1 ) ],
@@ -54,6 +66,7 @@ zoom = Vector2( 2, 2 )
 [node name="Asteroid" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 1 )
+animation = "defaultNL"
 
 [node name="rock_grab" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 13 )
