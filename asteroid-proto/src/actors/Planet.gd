@@ -25,10 +25,12 @@ func _take_damage(n: int) -> void:
 		elif(hp < max_hp):
 			isAlive = false
 			get_node("AnimatedSprite").play("default")
+			get_node("AudioStreamPlayer2D").stop()
 		else:
 			if isAlive == false:
 				get_node("AudioStreamPlayer").play()
 			isAlive = true
 			get_node("AnimatedSprite").play("life")
+			get_node("AudioStreamPlayer2D").play()
 			
 
