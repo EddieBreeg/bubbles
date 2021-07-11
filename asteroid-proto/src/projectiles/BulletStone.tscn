@@ -4,7 +4,7 @@
 [ext_resource path="res://src/projectiles/BulletStone.gd" type="Script" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 26.514
+radius = 22.8138
 
 [node name="BulletStone" type="RigidBody2D"]
 collision_layer = 16
