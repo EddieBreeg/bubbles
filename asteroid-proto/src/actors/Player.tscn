@@ -8,7 +8,7 @@
 [ext_resource path="res://assets/OtherVisuals/flecheGps.png" type="Texture" id=6]
 [ext_resource path="res://assets/characters/asteroid2.png" type="Texture" id=7]
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=3]
 animations = [ {
 "frames": [ ExtResource( 7 ) ],
 "loop": true,
@@ -22,7 +22,7 @@ animations = [ {
 } ]
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 127.383
+radius = 157.667
 
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 14
@@ -40,7 +40,7 @@ zoom = Vector2( 2, 2 )
 
 [node name="Asteroid" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.5, 0.5 )
-frames = SubResource( 1 )
+frames = SubResource( 3 )
 animation = "broken"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

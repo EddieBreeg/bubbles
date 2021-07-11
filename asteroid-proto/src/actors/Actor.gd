@@ -8,14 +8,19 @@ var moving_speed = 600
 var velocity: = Vector2(1, 0)
 var hp = 3
 export var max_hp = 8
+var force_sources = []
+
+func add_force_source(src: Actor):
+	force_sources.append(src)
+
+func _force_on(target: Actor) -> Vector2:
+	return Vector2.ZERO
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	self.add_to_group('Actor')
 	pass # Replace with function body.
 
-# func _get_hp() -> int:
-# 	return hp
 
 func _take_damage(n: int) -> void:
 	print(n)
@@ -26,4 +31,7 @@ func _take_damage(n: int) -> void:
 
 
 func _physics_process(delta: float) -> void:
-	move_and_collide(velocity * delta)
+	var global_force = Vector2.ZERO
+	for src in force_sources:
+		global_force += src._force_on(self)
+	move_and_collide((velocity + global_force) * delta)
