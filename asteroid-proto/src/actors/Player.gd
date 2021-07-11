@@ -32,8 +32,14 @@ func _add_rock(nb_of_rock):
 	rock_count += nb_of_rock
 
 func _process(_delta):
+	# Handling death and appearance
 	if not rock_count:
 		emit_signal('die')
+	elif(rock_count <= 3):
+		get_node("AnimatedSprite").play("broken")
+	else:
+		get_node("AnimatedSprite").play("default")
+			
 	# GPS handling
 	var home = get_parent().get_node('Motherland')
 	var dToHome = (home.position - position).normalized()

@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://assets/bouledeFeuu.png" type="Texture" id=1]
+[ext_resource path="res://assets/OtherVisuals/bullet_stone.png" type="Texture" id=1]
 [ext_resource path="res://assets/bulleVie.png" type="Texture" id=2]
 [ext_resource path="res://assets/upheavtt.ttf" type="DynamicFontData" id=3]
 
@@ -37,8 +37,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RocksIcon" type="Sprite" parent="."]
-position = Vector2( 871.977, 559.756 )
+[node name="bullet_stone" type="Sprite" parent="."]
+position = Vector2( 862.188, 562.54 )
 scale = Vector2( 0.235119, 0.235119 )
 texture = ExtResource( 1 )
 
