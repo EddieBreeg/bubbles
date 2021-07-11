@@ -17,7 +17,9 @@ var can_fire = true
 	
 func shot_poison():
 	var shoot_instance = shoot_nova.instance()
-	var player_position = get_parent().get_node("Player").get_global_position()
+	var player_position = Vector2(0,0)
+	if(get_parent().get_node("Player")):
+		player_position = get_parent().get_node("Player").get_global_position()
 	var shoot_direction = player_position - get_global_position() 
 	shoot_instance.nova_velocity = shoot_direction.normalized() * nova_speed
 	shoot_instance.position = get_global_position()

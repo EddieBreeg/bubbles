@@ -1,7 +1,7 @@
 extends Node2D
 class_name Level
 
-export var timer = 100000000000000000000
+export var timer = 180
 export var start = 0
 export var timer_enabled = true
 
