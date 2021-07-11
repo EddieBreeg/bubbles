@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/scenes/Tutorial.gd" type="Script" id=1]
 [ext_resource path="res://src/actors/Motherland.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/actors/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/actors/Planet.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/PixelFont.tres" type="DynamicFont" id=5]
+[ext_resource path="res://src/actors/Sun.tscn" type="PackedScene" id=6]
 
 [node name="Root" type="Node2D"]
 script = ExtResource( 1 )
@@ -12,7 +15,25 @@ timer_enabled = false
 scale = Vector2( 0.68, 0.68 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( -1120.7, 117.468 )
+position = Vector2( -884.631, 191.622 )
+
+[node name="Planet" parent="." instance=ExtResource( 4 )]
+position = Vector2( -1303.78, -133.547 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -203.893
+margin_top = 337.914
+margin_right = 117.107
+margin_bottom = 423.914
+custom_fonts/font = ExtResource( 5 )
+text = "Mother Land"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sun" parent="." instance=ExtResource( 6 )]
+position = Vector2( -1742.49, -243.742 )
 
 [connection signal="_how_to_heal" from="." to="." method="_how_to_heal"]
 [connection signal="_how_to_kill" from="." to="." method="_how_to_kill"]
+[connection signal="_how_to_recharge_lives" from="." to="." method="_how_to_recharge_lives"]

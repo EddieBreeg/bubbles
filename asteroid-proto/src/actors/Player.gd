@@ -16,6 +16,11 @@ func _get_rock_count() -> int:
 func _get_life_count() -> int:
 	return life_count
 	
+func set_life_count(n: int):
+	life_count = n 
+func set_rock_count(n: int):
+	rock_count = n
+	
 func _get_score() -> int:
 	return score
 	
@@ -30,6 +35,7 @@ func _update_score(value: int) -> void:
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	self.add_to_group('Player')
+
 
 func _reset_life():
 	if (life_count < 10):
