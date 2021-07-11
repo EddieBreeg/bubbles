@@ -5,7 +5,7 @@
 [ext_resource path="res://src/UI.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/UI.gd" type="Script" id=4]
 [ext_resource path="res://assets/Musics/AudioStreamPlayer.gd" type="Script" id=5]
-[ext_resource path="res://assets/flecheGps.png" type="Texture" id=6]
+[ext_resource path="res://assets/OtherVisuals/flecheGps.png" type="Texture" id=6]
 [ext_resource path="res://assets/characters/asteroid2.png" type="Texture" id=7]
 
 [sub_resource type="SpriteFrames" id=1]
