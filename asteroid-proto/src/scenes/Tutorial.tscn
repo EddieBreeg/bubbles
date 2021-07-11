@@ -41,3 +41,4 @@ position = Vector2( -1742.49, -243.742 )
 [connection signal="_how_to_heal" from="." to="." method="_how_to_heal"]
 [connection signal="_how_to_kill" from="." to="." method="_how_to_kill"]
 [connection signal="_how_to_recharge_lives" from="." to="." method="_how_to_recharge_lives"]
+[connection signal="_tutorial_end" from="." to="." method="_tutorial_end"]

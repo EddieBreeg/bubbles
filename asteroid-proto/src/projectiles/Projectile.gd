@@ -19,6 +19,7 @@ func _force_on(target: Actor) -> Vector2:
 
 func _ready():
 	velocity += projectile_speed*Vector2(1,0).rotated(rotation)
+	self.add_to_group('Projectile')
 	apply_impulse(Vector2(), velocity)
 	for bh in get_tree().get_nodes_in_group('Blackhole'):
 		force_sources.append(bh)

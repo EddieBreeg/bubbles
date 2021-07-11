@@ -111,7 +111,6 @@ margin_top = 549.412
 margin_right = 259.766
 margin_bottom = 585.412
 custom_fonts/font = ExtResource( 15 )
-text = "press space to continue"
 __meta__ = {
 "_edit_use_anchors_": false
 }
