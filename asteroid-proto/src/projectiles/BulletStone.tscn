@@ -9,6 +9,11 @@
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
+"frames": [ null ],
+"loop": true,
+"name": "end",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 3 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 1 ) ],
 "loop": true,
 "name": "default",
@@ -31,7 +36,7 @@ script = ExtResource( 2 )
 position = Vector2( -52.7663, 7.14765 )
 scale = Vector2( 0.282435, 0.282435 )
 frames = SubResource( 2 )
-frame = 1
+animation = "end"
 playing = true
 
 [node name="bullet_stone2" type="Sprite" parent="."]
