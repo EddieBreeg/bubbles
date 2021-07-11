@@ -2,15 +2,26 @@ extends RigidBody2D
 
 class_name Projectile
 
-export var projectile_speed = 1000 
+
 export var velocity = Vector2(1,0)
 export var damage = 0
+export var projectile_speed = 3
 
 var life_time = 3
+
+var force_sources = []
+
+func add_force_source(src: Actor):
+	force_sources.append(src)
+
+func _force_on(target: Actor) -> Vector2:
+	return Vector2.ZERO
 
 func _ready():
 	velocity += projectile_speed*Vector2(1,0).rotated(rotation)
 	apply_impulse(Vector2(), velocity)
+	for bh in get_tree().get_nodes_in_group('Blackhole'):
+		force_sources.append(bh)
 	get_node("AnimatedSprite").play("default")
 	self_destruct()
 
@@ -27,4 +38,6 @@ func _on_Projectile_body_entered(body: Node) -> void:
 		body._take_damage(-1)
 
 
-
+func _physics_process(delta):
+	for src in force_sources:
+		applied_force += src._force_on(self)

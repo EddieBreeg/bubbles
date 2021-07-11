@@ -7,13 +7,14 @@ signal die
 var moving_speed = 600
 var velocity: = Vector2(1, 0)
 var hp = 3
+export var mass = 100
 export var max_hp = 8
 var force_sources = []
 
 func add_force_source(src: Actor):
 	force_sources.append(src)
 
-func _force_on(target: Actor) -> Vector2:
+func _force_on(target: PhysicsBody2D) -> Vector2:
 	return Vector2.ZERO
 
 # Called when the node enters the scene tree for the first time.

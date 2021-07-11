@@ -13,8 +13,8 @@ radius = 82.2345
 collision_layer = 2
 collision_mask = 255
 script = ExtResource( 2 )
-mass = 2121
 distance_scale = 5
+rotation_speed = 0.564
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
