@@ -36,6 +36,7 @@ func _reset_life():
 		get_node("bubbles").play()
 	life_count = 10
 func _add_rock(nb_of_rock):
+	get_node("rock_grab").play()
 	rock_count += nb_of_rock
 
 func _process(_delta):
