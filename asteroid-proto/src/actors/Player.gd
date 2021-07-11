@@ -6,9 +6,9 @@ var shoot_rock = preload('..//projectiles/BulletStone.tscn')
 var shoot_life = preload('..//projectiles/BulletLife.tscn')
 var rock_count = 10
 var life_count = 10
+export var projectile_speed = 500
 var score = 0
 export var interpolation_fac = .1
-var force = Vector2.ZERO
 
 func _get_rock_count() -> int:
 	return rock_count
@@ -21,15 +21,22 @@ func _get_score() -> int:
 	
 func _update_score(value: int) -> void:
 	score += value
+	if (value > 0):
+		get_node("score+").play()
+	elif (value < 0):
+		get_node("score-").play()
+	
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	self.add_to_group('Player')
 
 func _reset_life():
+	if (life_count < 10):
+		get_node("bubbles").play()
 	life_count = 10
-	
 func _add_rock(nb_of_rock):
+	get_node("rock_grab").play()
 	rock_count += nb_of_rock
 
 func _process(_delta):
@@ -37,9 +44,15 @@ func _process(_delta):
 	if not rock_count:
 		emit_signal('die')
 	elif(rock_count <= 3):
-		get_node("Asteroid").play("broken")
+		if (life_count == 0):
+			get_node("Asteroid").play("brokenNL")
+		else:
+			get_node("Asteroid").play("broken")
 	else:
-		get_node("Asteroid").play("default")
+		if (life_count == 0):
+			get_node("Asteroid").play("defaultNL")
+		else:
+			get_node("Asteroid").play("default")
 			
 	# GPS handling
 	var home = get_parent().get_node('Motherland')
@@ -65,27 +78,29 @@ func _physics_process(_delta: float) -> void:
 	if Input.is_action_pressed("ui_down"):
 		velocity.y += moving_speed
 	var mousePos = get_global_mouse_position()
-	var projection = velocity.normalized().dot((mousePos - position).normalized())
+	var projection = velocity.dot((mousePos - position).normalized())
 	
 	if Input.is_action_just_pressed("shoot_rock") and rock_count:
 		rock_count -= 1
 		var shoot_instance = shoot_rock.instance()
 		shoot_instance.position = get_global_position()
-		print(projection)
-		shoot_instance.velocity = projection * (mousePos - position).normalized()
+		shoot_instance.projectile_speed = projectile_speed
+		shoot_instance.velocity = .5*projection * (mousePos - position).normalized()
 		shoot_instance.rotation = get_angle_to(mousePos)
 		get_parent().add_child(shoot_instance)
+		get_node("AudioStreamPlayer3").play()
 	if Input.is_action_just_pressed("shoot_life") and life_count:
 		life_count -= 1
 		var shoot_instance = shoot_life.instance()
 		shoot_instance.position = get_global_position()
-		shoot_instance.velocity = projection * (mousePos - position).normalized()
+		shoot_instance.projectile_speed = projectile_speed
+		shoot_instance.velocity = .5*projection * (mousePos - position).normalized()
 		shoot_instance.rotation = get_angle_to(get_global_mouse_position())
 		get_parent().add_child(shoot_instance)
 
 func _take_damage(n: int) -> void:
 	rock_count = rock_count - n if (rock_count-n) > 0 else 0
-
+	get_node("hit").play()
 func _on_Player_die():
 	print('Receive die signal')
 	var keep_score = self.score

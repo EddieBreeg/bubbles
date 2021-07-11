@@ -26,6 +26,8 @@ func _take_damage(n: int) -> void:
 			isAlive = false
 			get_node("AnimatedSprite").play("default")
 		else:
+			if isAlive == false:
+				get_node("AudioStreamPlayer").play()
 			isAlive = true
 			get_node("AnimatedSprite").play("life")
 			

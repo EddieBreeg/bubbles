@@ -1,8 +1,9 @@
 extends Node2D
 class_name Level
 
-export var timer = 180
+export var timer = 90
 export var start = 0
+export var timer_enabled = true
 
 # Declare member variables here. Examples:
 var game_over = preload('game_over.tscn')
@@ -24,7 +25,7 @@ func _game_over(score):
 
 func _process(delta):
 	var elapsed = OS.get_unix_time() - start
-	if(elapsed >= timer):
+	if(timer_enabled and elapsed >= timer):
 		if(get_node('Player')):
 			get_node('Player')._die()
 
