@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/scenes/Tutorial.gd" type="Script" id=1]
+[ext_resource path="res://src/actors/Motherland.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/actors/Player.tscn" type="PackedScene" id=3]
+
+[node name="Root" type="Node2D"]
+script = ExtResource( 1 )
+timer_enabled = false
+
+[node name="Motherland" parent="." instance=ExtResource( 2 )]
+scale = Vector2( 0.68, 0.68 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( -1120.7, 117.468 )
+
+[connection signal="_how_to_heal" from="." to="." method="_how_to_heal"]
+[connection signal="_how_to_kill" from="." to="." method="_how_to_kill"]
