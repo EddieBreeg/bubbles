@@ -1,0 +1,136 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://src/actors/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/actors/Sun.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/actors/Blackhole.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/actors/Planet.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/actors/Motherland.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/actors/NovaSun.tscn" type="PackedScene" id=6]
+
+[node name="level1" type="Node2D"]
+
+[node name="Sun" parent="." instance=ExtResource( 2 )]
+position = Vector2( -3222.22, 2256.69 )
+
+[node name="Sun2" parent="." instance=ExtResource( 2 )]
+position = Vector2( -2949.44, -388.374 )
+
+[node name="Sun3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3016.37, -1285.86 )
+
+[node name="Planet" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2229.27, 1888.81 )
+
+[node name="Sun4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3524.44, 1832.9 )
+
+[node name="Motherland" parent="." instance=ExtResource( 5 )]
+
+[node name="Planet7" parent="." instance=ExtResource( 4 )]
+position = Vector2( 676.894, -2549.31 )
+
+[node name="Blackhole2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1296.08, -2292.58 )
+
+[node name="Planet8" parent="." instance=ExtResource( 4 )]
+position = Vector2( -5139.44, 4567.65 )
+
+[node name="Sun9" parent="." instance=ExtResource( 2 )]
+position = Vector2( -5427.44, 3863.65 )
+
+[node name="Sun10" parent="." instance=ExtResource( 2 )]
+position = Vector2( -4275.44, 4791.65 )
+
+[node name="Planet9" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2459.71, 4674.59 )
+
+[node name="Blackhole3" parent="." instance=ExtResource( 3 )]
+position = Vector2( -4115.44, 3991.65 )
+
+[node name="NovaSun" parent="." instance=ExtResource( 6 )]
+position = Vector2( 3660.01, 4397.97 )
+
+[node name="Planet2" parent="." instance=ExtResource( 4 )]
+position = Vector2( -2317.36, -497.625 )
+
+[node name="Planet3" parent="." instance=ExtResource( 4 )]
+position = Vector2( -2239.04, 2510.96 )
+
+[node name="Planet4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3648.81, -803.671 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( -1217.25, 0.146973 )
+
+[node name="Blackhole" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3230.86, 692.443 )
+scale = Vector2( 2, 2 )
+
+[node name="Planet5" parent="." instance=ExtResource( 4 )]
+position = Vector2( -9296.4, -5780.53 )
+
+[node name="Sun5" parent="." instance=ExtResource( 2 )]
+position = Vector2( -8420.48, -6445.02 )
+
+[node name="Sun6" parent="." instance=ExtResource( 2 )]
+position = Vector2( -10534.8, -6565.83 )
+
+[node name="Sun7" parent="." instance=ExtResource( 2 )]
+position = Vector2( -9991.09, -4119.31 )
+
+[node name="Sun8" parent="." instance=ExtResource( 2 )]
+position = Vector2( -7876.81, -4844.21 )
+
+[node name="NovaSun3" parent="." instance=ExtResource( 6 )]
+position = Vector2( -4707.6, -673.091 )
+scale = Vector2( 2, 2 )
+
+[node name="Blackhole4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 7722.22, -5234.49 )
+scale = Vector2( 2, 2 )
+
+[node name="NovaSun2" parent="." instance=ExtResource( 6 )]
+position = Vector2( -12861.1, -216.95 )
+scale = Vector2( 2, 2 )
+
+[node name="NovaSun4" parent="." instance=ExtResource( 6 )]
+position = Vector2( -11948.8, 2035.24 )
+
+[node name="Planet6" parent="." instance=ExtResource( 4 )]
+position = Vector2( -11720.8, 752.348 )
+
+[node name="Planet10" parent="." instance=ExtResource( 4 )]
+position = Vector2( 8479.33, -5984.8 )
+scale = Vector2( 2, 2 )
+
+[node name="Blackhole6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 7148.23, -5795.81 )
+scale = Vector2( 2, 2 )
+
+[node name="Blackhole7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 8841.66, -5110.83 )
+scale = Vector2( 2, 2 )
+
+[node name="Blackhole8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 7661.96, -6613.99 )
+scale = Vector2( 2, 2 )
+
+[node name="Blackhole9" parent="." instance=ExtResource( 3 )]
+position = Vector2( 9716.92, -5795.81 )
+scale = Vector2( 2, 2 )
+
+[node name="Blackhole10" parent="." instance=ExtResource( 3 )]
+position = Vector2( 9907.19, -6747.18 )
+scale = Vector2( 2, 2 )
+
+[node name="Sun11" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5933.06, -4965.33 )
+scale = Vector2( 2, 2 )
+
+[node name="Planet11" parent="." instance=ExtResource( 4 )]
+position = Vector2( -1068.7, -6506.24 )
+scale = Vector2( 2, 2 )
+
+[node name="Blackhole5" parent="." instance=ExtResource( 3 )]
+position = Vector2( -10623.2, -5366.51 )
+scale = Vector2( 2, 2 )
