@@ -7,6 +7,7 @@ var shoot_life = preload('..//projectiles/BulletLife.tscn')
 var rock_count = 10
 var life_count = 10
 var score = 0
+export var interpolation_fac = .1
 
 func _get_rock_count() -> int:
 	return rock_count
@@ -36,15 +37,19 @@ func _process(_delta):
 	if not rock_count:
 		emit_signal('die')
 	elif(rock_count <= 3):
-		get_node("AnimatedSprite").play("broken")
+		get_node("Asteroid").play("broken")
 	else:
-		get_node("AnimatedSprite").play("default")
+		get_node("Asteroid").play("default")
 			
 	# GPS handling
 	var home = get_parent().get_node('Motherland')
 	var dToHome = (home.position - position).normalized()
 	var angle = acos(dToHome.x) * sign(dToHome.y)
 	get_node('GPS').rotation = angle
+	# set rotation
+	var d = velocity.normalized()
+	var asteroid = get_node("Asteroid")
+	asteroid.rotation = interpolation_fac*(cos(d.x) * sign(d.y)) + (1-interpolation_fac)*asteroid.rotation
 		
 func _physics_process(_delta: float) -> void:
 	velocity.x = 0
