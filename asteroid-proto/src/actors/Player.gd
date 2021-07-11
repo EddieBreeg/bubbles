@@ -43,9 +43,15 @@ func _process(_delta):
 	if not rock_count:
 		emit_signal('die')
 	elif(rock_count <= 3):
-		get_node("Asteroid").play("broken")
+		if (life_count == 0):
+			get_node("Asteroid").play("brokenNL")
+		else:
+			get_node("Asteroid").play("broken")
 	else:
-		get_node("Asteroid").play("default")
+		if (life_count == 0):
+			get_node("Asteroid").play("defaultNL")
+		else:
+			get_node("Asteroid").play("default")
 			
 	# GPS handling
 	var home = get_parent().get_node('Motherland')
