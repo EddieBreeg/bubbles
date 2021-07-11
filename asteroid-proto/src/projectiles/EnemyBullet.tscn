@@ -10,7 +10,7 @@
 [ext_resource path="res://assets/OtherVisuals/bouledeFeuuFin3.png" type="Texture" id=8]
 [ext_resource path="res://assets/OtherVisuals/bouledeFeuuFin1.png" type="Texture" id=9]
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 9 ), ExtResource( 7 ), ExtResource( 8 ), null ],
 "loop": false,
@@ -23,7 +23,7 @@ animations = [ {
 "speed": 10.0
 } ]
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="CircleShape2D" id=2]
 radius = 22.8138
 
 [node name="EnemyBullet" type="RigidBody2D"]
@@ -37,12 +37,12 @@ script = ExtResource( 2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( -43.7028, 5.1649 )
 scale = Vector2( 0.317529, 0.317529 )
-frames = SubResource( 2 )
+frames = SubResource( 1 )
 animation = "end"
 frame = 3
 playing = true
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [connection signal="body_entered" from="." to="." method="_on_Projectile_body_entered"]
