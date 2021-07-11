@@ -8,6 +8,7 @@ var rock_count = 10
 var life_count = 10
 var score = 0
 export var interpolation_fac = .1
+var force = Vector2.ZERO
 
 func _get_rock_count() -> int:
 	return rock_count
@@ -20,11 +21,10 @@ func _get_score() -> int:
 	
 func _update_score(value: int) -> void:
 	score += value
-	
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	self.add_to_group('Player')
-	pass # Replace with function body.
 
 func _reset_life():
 	life_count = 10

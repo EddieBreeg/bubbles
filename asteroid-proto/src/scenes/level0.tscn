@@ -6,14 +6,17 @@
 [ext_resource path="res://src/actors/Sun.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/actors/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/items/Rocks.tscn" type="PackedScene" id=6]
-[ext_resource path="res://src/scenes/Level.gd" type="Script" id=7]
+[ext_resource path="res://src/scenes/level.gd" type="Script" id=7]
 [ext_resource path="res://src/actors/Blackhole.tscn" type="PackedScene" id=8]
 
 [node name="scene_root" type="Node2D"]
 script = ExtResource( 7 )
 
 [node name="Blackhole" parent="." instance=ExtResource( 8 )]
-position = Vector2( -1834.37, -466.601 )
+position = Vector2( -158.301, -781.516 )
+
+[node name="Blackhole2" parent="." instance=ExtResource( 8 )]
+position = Vector2( -1238.17, 1181.03 )
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
 position = Vector2( -776.072, -0.103287 )
