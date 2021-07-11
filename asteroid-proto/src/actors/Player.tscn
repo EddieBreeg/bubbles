@@ -8,7 +8,7 @@
 [ext_resource path="res://assets/flecheGps.png" type="Texture" id=6]
 [ext_resource path="res://assets/characters/asteroid2.png" type="Texture" id=7]
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 7 ) ],
 "loop": true,
@@ -21,12 +21,13 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="CircleShape2D" id=1]
-radius = 133.907
+[sub_resource type="CircleShape2D" id=2]
+radius = 157.667
 
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 14
 script = ExtResource( 2 )
+interpolation_fac = 0.066
 
 [node name="Jean_HUD" parent="." instance=ExtResource( 3 )]
 position = Vector2( -26.7269, -7.1272 )
@@ -37,12 +38,12 @@ script = ExtResource( 4 )
 current = true
 zoom = Vector2( 2, 2 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+[node name="Asteroid" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.5, 0.5 )
-frames = SubResource( 2 )
+frames = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="GPS" type="Node2D" parent="."]
 
