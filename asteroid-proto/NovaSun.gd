@@ -27,11 +27,14 @@ func shot_poison():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if not hp:
+		queue_free()
 	if(can_fire):
 		can_fire = false
 		rotation += rotation_speed
 		shot_poison()
 		yield(get_tree().create_timer(rate_of_fire), 'timeout')
 		can_fire = true
+		
 		
 
