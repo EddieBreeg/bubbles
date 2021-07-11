@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/upheavtt.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://src/scenes/game_over.gd" type="Script" id=2]
+[ext_resource path="res://assets/Musics/Death.wav" type="AudioStream" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -11,7 +12,7 @@ font_data = ExtResource( 1 )
 size = 75
 font_data = ExtResource( 1 )
 
-[sub_resource type="StyleBoxEmpty" id=3]
+[sub_resource type="StyleBoxEmpty" id=5]
 
 [sub_resource type="DynamicFont" id=4]
 size = 25
@@ -50,7 +51,7 @@ margin_left = 454.146
 margin_top = 454.777
 margin_right = 569.146
 margin_bottom = 483.777
-custom_styles/focus = SubResource( 3 )
+custom_styles/focus = SubResource( 5 )
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0.984314, 0.972549, 1 )
 text = "Restart"
@@ -59,5 +60,9 @@ __meta__ = {
 "_edit_use_anchors_": false,
 "_editor_description_": ""
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
 
 [connection signal="pressed" from="RestartButton" to="." method="_on_RestartButton_pressed"]

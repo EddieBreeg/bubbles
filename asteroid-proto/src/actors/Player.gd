@@ -21,14 +21,20 @@ func _get_score() -> int:
 	
 func _update_score(value: int) -> void:
 	score += value
+	if (value > 0):
+		get_node("score+").play()
+	elif (value < 0):
+		get_node("score-").play()
+	
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	self.add_to_group('Player')
 
 func _reset_life():
+	if (life_count < 10):
+		get_node("bubbles").play()
 	life_count = 10
-	
 func _add_rock(nb_of_rock):
 	rock_count += nb_of_rock
 
@@ -37,9 +43,15 @@ func _process(_delta):
 	if not rock_count:
 		emit_signal('die')
 	elif(rock_count <= 3):
-		get_node("Asteroid").play("broken")
+		if (life_count == 0):
+			get_node("Asteroid").play("brokenNL")
+		else:
+			get_node("Asteroid").play("broken")
 	else:
-		get_node("Asteroid").play("default")
+		if (life_count == 0):
+			get_node("Asteroid").play("defaultNL")
+		else:
+			get_node("Asteroid").play("default")
 			
 	# GPS handling
 	var home = get_parent().get_node('Motherland')
@@ -75,6 +87,7 @@ func _physics_process(_delta: float) -> void:
 		shoot_instance.velocity = projection * (mousePos - position).normalized()
 		shoot_instance.rotation = get_angle_to(mousePos)
 		get_parent().add_child(shoot_instance)
+		get_node("AudioStreamPlayer3").play()
 	if Input.is_action_just_pressed("shoot_life") and life_count:
 		life_count -= 1
 		var shoot_instance = shoot_life.instance()
@@ -85,7 +98,7 @@ func _physics_process(_delta: float) -> void:
 
 func _take_damage(n: int) -> void:
 	rock_count = rock_count - n if (rock_count-n) > 0 else 0
-
+	get_node("hit").play()
 func _on_Player_die():
 	print('Receive die signal')
 	var keep_score = self.score
