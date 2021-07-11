@@ -24,7 +24,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/projectiles/BulletStone.gd"
 }, {
-"base": "Actor",
+"base": "KinematicBody2D",
 "class": "Enemy",
 "language": "GDScript",
 "path": "res://src/actors/Enemy.gd"
@@ -153,7 +153,6 @@ shoot_life={
 2d_physics/layer_6="life"
 2d_physics/layer_7="enemy_bulets"
 2d_physics/layer_8="items"
-2d_physics/layer_9="immaterial_ennemies"
 
 [physics]
 
