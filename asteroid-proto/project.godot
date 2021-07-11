@@ -34,6 +34,16 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/projectiles/EnemyBullet.gd"
 }, {
+"base": "Node2D",
+"class": "Level",
+"language": "GDScript",
+"path": "res://src/scenes/Level.gd"
+}, {
+"base": "Node2D",
+"class": "MainsScene",
+"language": "GDScript",
+"path": "res://src/MainScene.gd"
+}, {
 "base": "Actor",
 "class": "Planet",
 "language": "GDScript",
@@ -53,11 +63,6 @@ _global_script_classes=[ {
 "class": "Sun",
 "language": "GDScript",
 "path": "res://src/actors/Sun.gd"
-}, {
-"base": "Node2D",
-"class": "level",
-"language": "GDScript",
-"path": "res://src/scenes/level.gd"
 } ]
 _global_script_class_icons={
 "Actor": "",
@@ -65,11 +70,12 @@ _global_script_class_icons={
 "BulletStone": "",
 "Enemy": "",
 "EnemyBullet": "",
+"Level": "",
+"MainsScene": "",
 "Planet": "",
 "Player": "",
 "Projectile": "",
-"Sun": "",
-"level": ""
+"Sun": ""
 }
 
 [application]

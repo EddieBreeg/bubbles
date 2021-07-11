@@ -46,6 +46,7 @@ func _process(_delta):
 	var dToHome = (home.position - position).normalized()
 	var angle = acos(dToHome.x) * sign(dToHome.y)
 	get_node('GPS').rotation = angle
+	
 	# set rotation
 	var d = velocity.normalized()
 	var asteroid = get_node("Asteroid")
@@ -86,7 +87,12 @@ func _take_damage(n: int) -> void:
 	rock_count = rock_count - n if (rock_count-n) > 0 else 0
 
 func _on_Player_die():
+	print('Receive die signal')
 	var keep_score = self.score
 	queue_free()
 	get_parent()._game_over(keep_score)
+	
+func _die():
+	print("Sending die signal")
+	emit_signal('die')
 

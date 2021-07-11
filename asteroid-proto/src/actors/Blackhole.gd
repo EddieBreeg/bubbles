@@ -12,6 +12,10 @@ func _ready():
 
 func _attract_player():
 	var player = get_parent().get_node("Player")
+	# Position player- mienne normalisé fois mass
+	player.velocity.x = (player.position.x - self.position.x) * 5
+	player.velocity.y = (player.position.y - self.position.y) * 5
+	var projection = velocity.normalized()
 	
 	
 	
@@ -20,5 +24,5 @@ func _attract_player():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
-#	_attractPlayer()
+
 	
