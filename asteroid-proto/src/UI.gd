@@ -24,5 +24,5 @@ func _process(_delta):
 	var time_elapsed = scene._get_time_elapsed()
 	var max_time = scene._get_max_time()
 	var danger_time = max_time - 10
-	get_node("TimeLabel").text = "Time: " + str(time_elapsed)
+	get_node("TimeLabel").text = "Time: " + str(max_time - time_elapsed)
 	get_node("TimeLabel").set("custom_colors/font_color", Color(1,0,0) if time_elapsed >= danger_time else Color(1,1,1))

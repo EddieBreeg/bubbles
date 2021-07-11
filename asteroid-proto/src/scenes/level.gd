@@ -1,7 +1,7 @@
 extends Node2D
 class_name Level
 
-export var timer = 60
+export var timer = 20
 export var start = 0
 
 # Declare member variables here. Examples:
