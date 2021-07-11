@@ -4,12 +4,12 @@
 [ext_resource path="res://assets/characters/novaPoison.png" type="Texture" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 201.468
+radius = 109.077
 height = 0.0
 
 [sub_resource type="CapsuleShape2D" id=2]
-radius = 202.917
-height = 11.7161
+radius = 107.817
+height = 0.0
 
 [node name="PoisonNova" type="KinematicBody2D"]
 collision_layer = 256

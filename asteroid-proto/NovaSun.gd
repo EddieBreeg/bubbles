@@ -8,7 +8,7 @@ var rotation_dir = 0
 
 var nova_speed = Vector2(200,200)
 
-var rate_of_fire = 20
+var rate_of_fire = 5
 var can_fire = true
 
 
@@ -17,7 +17,9 @@ var can_fire = true
 	
 func shot_poison():
 	var shoot_instance = shoot_nova.instance()
-	var player_position = get_parent().get_node("Player").get_global_position()
+	var player_position = Vector2(0,0)
+	if(get_parent().get_node("Player")):
+		player_position = get_parent().get_node("Player").get_global_position()
 	var shoot_direction = player_position - get_global_position() 
 	shoot_instance.nova_velocity = shoot_direction.normalized() * nova_speed
 	shoot_instance.position = get_global_position()
@@ -36,5 +38,8 @@ func _process(delta: float) -> void:
 		yield(get_tree().create_timer(rate_of_fire), 'timeout')
 		can_fire = true
 		
-		
+func _on_CollisionDetector_body_entered(body):
+	print("Enter blackhole atmosphere")
+	if(body.is_in_group("Player")):
+		body._take_damage(1)
 
