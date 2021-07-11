@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/actors/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/actors/Sun.tscn" type="PackedScene" id=2]
@@ -6,8 +6,12 @@
 [ext_resource path="res://src/actors/Planet.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/actors/Motherland.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/actors/NovaSun.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/scenes/level.gd" type="Script" id=7]
+[ext_resource path="res://src/Background.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/items/Rocks.tscn" type="PackedScene" id=9]
 
 [node name="level1" type="Node2D"]
+script = ExtResource( 7 )
 
 [node name="Sun" parent="." instance=ExtResource( 2 )]
 position = Vector2( -3222.22, 2256.69 )
@@ -42,13 +46,13 @@ position = Vector2( -5427.44, 3863.65 )
 position = Vector2( -4275.44, 4791.65 )
 
 [node name="Planet9" parent="." instance=ExtResource( 4 )]
-position = Vector2( 2459.71, 4674.59 )
+position = Vector2( -183.138, 3949.69 )
 
 [node name="Blackhole3" parent="." instance=ExtResource( 3 )]
 position = Vector2( -4115.44, 3991.65 )
 
 [node name="NovaSun" parent="." instance=ExtResource( 6 )]
-position = Vector2( 3660.01, 4397.97 )
+position = Vector2( 1017.16, 3673.07 )
 
 [node name="Planet2" parent="." instance=ExtResource( 4 )]
 position = Vector2( -2317.36, -497.625 )
@@ -67,70 +71,189 @@ position = Vector2( 3230.86, 692.443 )
 scale = Vector2( 2, 2 )
 
 [node name="Planet5" parent="." instance=ExtResource( 4 )]
-position = Vector2( -9296.4, -5780.53 )
+position = Vector2( -5461.24, -4155.03 )
 
 [node name="Sun5" parent="." instance=ExtResource( 2 )]
-position = Vector2( -8420.48, -6445.02 )
+position = Vector2( -4585.32, -4819.52 )
 
 [node name="Sun6" parent="." instance=ExtResource( 2 )]
-position = Vector2( -10534.8, -6565.83 )
+position = Vector2( -6699.64, -4940.33 )
 
 [node name="Sun7" parent="." instance=ExtResource( 2 )]
-position = Vector2( -9991.09, -4119.31 )
+position = Vector2( -6155.93, -2493.81 )
 
 [node name="Sun8" parent="." instance=ExtResource( 2 )]
-position = Vector2( -7876.81, -4844.21 )
-
-[node name="NovaSun3" parent="." instance=ExtResource( 6 )]
-position = Vector2( -4707.6, -673.091 )
-scale = Vector2( 2, 2 )
+position = Vector2( -4041.65, -3218.71 )
 
 [node name="Blackhole4" parent="." instance=ExtResource( 3 )]
-position = Vector2( 7722.22, -5234.49 )
+position = Vector2( 2972.72, -4091.56 )
 scale = Vector2( 2, 2 )
 
 [node name="NovaSun2" parent="." instance=ExtResource( 6 )]
-position = Vector2( -12861.1, -216.95 )
+position = Vector2( -8771.96, -775.715 )
 scale = Vector2( 2, 2 )
 
 [node name="NovaSun4" parent="." instance=ExtResource( 6 )]
-position = Vector2( -11948.8, 2035.24 )
+position = Vector2( -7859.66, 1476.48 )
+
+[node name="Rocks7" parent="." instance=ExtResource( 9 )]
+position = Vector2( -4844.27, 1376.16 )
+
+[node name="Rocks8" parent="." instance=ExtResource( 9 )]
+position = Vector2( -1500.05, 2742.61 )
+
+[node name="Rocks9" parent="." instance=ExtResource( 9 )]
+position = Vector2( -768.878, -3262.6 )
+
+[node name="Rocks10" parent="." instance=ExtResource( 9 )]
+position = Vector2( -7289.51, -3394.45 )
+
+[node name="Rocks11" parent="." instance=ExtResource( 9 )]
+position = Vector2( 2659.25, 2706.65 )
+
+[node name="Rocks12" parent="." instance=ExtResource( 9 )]
+position = Vector2( -3381.93, 3905.3 )
+
+[node name="Rocks13" parent="." instance=ExtResource( 9 )]
+position = Vector2( 3126.72, -2195.81 )
+
+[node name="Rocks14" parent="." instance=ExtResource( 9 )]
+position = Vector2( -8775.83, 2155.28 )
+
+[node name="Sun19" parent="." instance=ExtResource( 2 )]
+position = Vector2( -9063.51, 537.105 )
 
 [node name="Planet6" parent="." instance=ExtResource( 4 )]
-position = Vector2( -11720.8, 752.348 )
+position = Vector2( -9261.81, -70.1185 )
 
 [node name="Planet10" parent="." instance=ExtResource( 4 )]
-position = Vector2( 8479.33, -5984.8 )
+position = Vector2( 3729.83, -4841.87 )
 scale = Vector2( 2, 2 )
 
 [node name="Blackhole6" parent="." instance=ExtResource( 3 )]
-position = Vector2( 7148.23, -5795.81 )
+position = Vector2( 2398.73, -4652.88 )
 scale = Vector2( 2, 2 )
 
 [node name="Blackhole7" parent="." instance=ExtResource( 3 )]
-position = Vector2( 8841.66, -5110.83 )
+position = Vector2( 4092.16, -3967.9 )
 scale = Vector2( 2, 2 )
 
 [node name="Blackhole8" parent="." instance=ExtResource( 3 )]
-position = Vector2( 7661.96, -6613.99 )
+position = Vector2( 2912.46, -5471.06 )
 scale = Vector2( 2, 2 )
 
 [node name="Blackhole9" parent="." instance=ExtResource( 3 )]
-position = Vector2( 9716.92, -5795.81 )
+position = Vector2( 4967.42, -4652.88 )
 scale = Vector2( 2, 2 )
 
 [node name="Blackhole10" parent="." instance=ExtResource( 3 )]
-position = Vector2( 9907.19, -6747.18 )
+position = Vector2( 5157.69, -5604.25 )
 scale = Vector2( 2, 2 )
 
 [node name="Sun11" parent="." instance=ExtResource( 2 )]
-position = Vector2( 5933.06, -4965.33 )
+position = Vector2( 1183.56, -3822.4 )
 scale = Vector2( 2, 2 )
 
 [node name="Planet11" parent="." instance=ExtResource( 4 )]
-position = Vector2( -1068.7, -6506.24 )
+position = Vector2( -2338.62, -4347.38 )
 scale = Vector2( 2, 2 )
 
 [node name="Blackhole5" parent="." instance=ExtResource( 3 )]
-position = Vector2( -10623.2, -5366.51 )
+position = Vector2( -6788.04, -3741.01 )
 scale = Vector2( 2, 2 )
+
+[node name="Background" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1933.45, 2328.65 )
+
+[node name="Planet12" parent="." instance=ExtResource( 4 )]
+position = Vector2( -5822.24, -1010.15 )
+
+[node name="Sun12" parent="." instance=ExtResource( 2 )]
+position = Vector2( -6618.96, -705.025 )
+
+[node name="Sun13" parent="." instance=ExtResource( 2 )]
+position = Vector2( -5737.48, 498.525 )
+
+[node name="Planet13" parent="." instance=ExtResource( 4 )]
+position = Vector2( -5534.07, 2176.72 )
+
+[node name="Blackhole11" parent="." instance=ExtResource( 3 )]
+position = Vector2( -3567.7, -1823.82 )
+
+[node name="Blackhole12" parent="." instance=ExtResource( 3 )]
+position = Vector2( -6127.37, -145.628 )
+
+[node name="Blackhole13" parent="." instance=ExtResource( 3 )]
+position = Vector2( -4228.81, 2990.38 )
+
+[node name="Blackhole14" parent="." instance=ExtResource( 3 )]
+position = Vector2( 42.9482, 2363.18 )
+
+[node name="Sun14" parent="." instance=ExtResource( 2 )]
+position = Vector2( 466.733, 2922.58 )
+
+[node name="Blackhole15" parent="." instance=ExtResource( 3 )]
+position = Vector2( -2991.35, 1125.73 )
+
+[node name="Sun15" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1838.66, -2078.09 )
+
+[node name="Planet14" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1893.38, 21.9001 )
+
+[node name="Planet15" parent="." instance=ExtResource( 4 )]
+position = Vector2( -1464.94, 1448.95 )
+
+[node name="Sun16" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1988.19, 1106.46 )
+
+[node name="Sun17" parent="." instance=ExtResource( 2 )]
+position = Vector2( -789.472, 1829.49 )
+
+[node name="Sun18" parent="." instance=ExtResource( 2 )]
+position = Vector2( 837.363, 1800.95 )
+
+[node name="Planet16" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1103.75, 1277.7 )
+
+[node name="Planet17" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1018.12, -1367.09 )
+
+[node name="Blackhole16" parent="." instance=ExtResource( 3 )]
+position = Vector2( 418.762, -1452.72 )
+
+[node name="Planet18" parent="." instance=ExtResource( 4 )]
+position = Vector2( -4258.78, -446.235 )
+
+[node name="NovaSun3" parent="." instance=ExtResource( 6 )]
+position = Vector2( -4196.83, 606.989 )
+
+[node name="NovaSun5" parent="." instance=ExtResource( 6 )]
+position = Vector2( -4738.62, -2310.55 )
+
+[node name="Planet19" parent="." instance=ExtResource( 4 )]
+position = Vector2( -2912, -2881.37 )
+
+[node name="Planet20" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2758.14, -2995.54 )
+
+[node name="NovaSun6" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2244.4, -1796.82 )
+
+[node name="Rocks" parent="." instance=ExtResource( 9 )]
+position = Vector2( 2355.6, 960.396 )
+
+[node name="Rocks2" parent="." instance=ExtResource( 9 )]
+position = Vector2( -1829.27, 3725.77 )
+
+[node name="Rocks3" parent="." instance=ExtResource( 9 )]
+position = Vector2( -7613.57, 338.909 )
+
+[node name="Rocks4" parent="." instance=ExtResource( 9 )]
+position = Vector2( -3789.08, -4341.81 )
+
+[node name="Rocks5" parent="." instance=ExtResource( 9 )]
+position = Vector2( 54.4326, -4246.67 )
+
+[node name="Rocks6" parent="." instance=ExtResource( 9 )]
+position = Vector2( 4012.11, -5635.67 )

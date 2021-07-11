@@ -6,7 +6,7 @@ class_name PoisonNova
 export var speed = 1000 
 var life_time = 3
 var nova_velocity = Vector2(100,0)
-var life_time_nova = 60
+var life_time_nova = 15
 
 
 # Called when the node enters the scene tree for the first time.

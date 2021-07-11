@@ -13,6 +13,7 @@ radius = 64.13
 collision_layer = 2
 collision_mask = 253
 script = ExtResource( 2 )
+mass = 70
 distance_scale = 5
 rotation_speed = 0.564
 
