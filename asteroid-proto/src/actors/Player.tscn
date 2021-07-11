@@ -13,7 +13,7 @@
 [ext_resource path="res://assets/Musics/hit.wav" type="AudioStream" id=11]
 [ext_resource path="res://assets/Musics/bubbles.wav" type="AudioStream" id=12]
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=3]
 animations = [ {
 "frames": [ ExtResource( 7 ) ],
 "loop": true,
@@ -27,7 +27,7 @@ animations = [ {
 } ]
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 157.667
+radius = 127.383
 
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 14
@@ -45,7 +45,7 @@ zoom = Vector2( 2, 2 )
 
 [node name="Asteroid" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.5, 0.5 )
-frames = SubResource( 1 )
+frames = SubResource( 3 )
 animation = "broken"
 
 [node name="bubbles" type="AudioStreamPlayer" parent="."]

@@ -1,7 +1,20 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://src/projectiles/Projectile.gd" type="Script" id=1]
 [ext_resource path="res://assets/OtherVisuals/bulleVie.png" type="Texture" id=2]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ null ],
+"loop": true,
+"name": "end",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 31.9744
@@ -15,9 +28,10 @@ contact_monitor = true
 script = ExtResource( 1 )
 damage = -1
 
-[node name="bulleVie" type="Sprite" parent="."]
-scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 2 )
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.252766, 0.252766 )
+frames = SubResource( 2 )
+playing = true
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
 position = Vector2( 0.397301, -1.85406 )

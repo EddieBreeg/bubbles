@@ -1,24 +1,20 @@
 extends Enemy
 class_name Blackhole
 
+export var mass = 100000
+export var distance_scale = 7
+export var max_distance = 900
+var baseStrength = 0
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	var player = get_parent().get_node('Player')
+	player.add_force_source(self)
+	baseStrength = mass * distance_scale * distance_scale
 
-func _attract_player():
-	var player = get_parent().get_node("Player")
 	
-	
-	
-	
-	
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	_attractPlayer()
-	
+func _force_on(target: Actor) -> Vector2:
+	var v = position - target.position
+	var d = v.length()
+	if d > max_distance:
+		return Vector2.ZERO
+	return v * (baseStrength/(d*d))

@@ -34,6 +34,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/projectiles/EnemyBullet.gd"
 }, {
+"base": "Node2D",
+"class": "MainsScene",
+"language": "GDScript",
+"path": "res://src/MainScene.gd"
+}, {
 "base": "Actor",
 "class": "Planet",
 "language": "GDScript",
@@ -65,6 +70,7 @@ _global_script_class_icons={
 "BulletStone": "",
 "Enemy": "",
 "EnemyBullet": "",
+"MainsScene": "",
 "Planet": "",
 "Player": "",
 "Projectile": "",

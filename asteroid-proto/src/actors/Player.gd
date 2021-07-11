@@ -8,6 +8,7 @@ var rock_count = 10
 var life_count = 10
 var score = 0
 export var interpolation_fac = .1
+var force = Vector2.ZERO
 
 func _get_rock_count() -> int:
 	return rock_count
@@ -25,10 +26,10 @@ func _update_score(value: int) -> void:
 	elif (value < 0):
 		get_node("score-").play()
 	
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	self.add_to_group('Player')
-	pass # Replace with function body.
 
 func _reset_life():
 	if (life_count < 10):
@@ -51,6 +52,7 @@ func _process(_delta):
 	var dToHome = (home.position - position).normalized()
 	var angle = acos(dToHome.x) * sign(dToHome.y)
 	get_node('GPS').rotation = angle
+	
 	# set rotation
 	var d = velocity.normalized()
 	var asteroid = get_node("Asteroid")
@@ -92,7 +94,12 @@ func _take_damage(n: int) -> void:
 	rock_count = rock_count - n if (rock_count-n) > 0 else 0
 	get_node("hit").play()
 func _on_Player_die():
+	print('Receive die signal')
 	var keep_score = self.score
 	queue_free()
 	get_parent()._game_over(keep_score)
 	
+func _die():
+	print("Sending die signal")
+	emit_signal('die')
+
