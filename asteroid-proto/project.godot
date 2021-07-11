@@ -44,6 +44,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/MainScene.gd"
 }, {
+"base": "Enemy",
+"class": "NovaSun",
+"language": "GDScript",
+"path": "res://NovaSun.gd"
+}, {
 "base": "Actor",
 "class": "Planet",
 "language": "GDScript",
@@ -53,6 +58,11 @@ _global_script_classes=[ {
 "class": "Player",
 "language": "GDScript",
 "path": "res://src/actors/Player.gd"
+}, {
+"base": "Actor",
+"class": "PoisonNova",
+"language": "GDScript",
+"path": "res://PoisonNova.gd"
 }, {
 "base": "RigidBody2D",
 "class": "Projectile",
@@ -72,8 +82,10 @@ _global_script_class_icons={
 "EnemyBullet": "",
 "Level": "",
 "MainsScene": "",
+"NovaSun": "",
 "Planet": "",
 "Player": "",
+"PoisonNova": "",
 "Projectile": "",
 "Sun": ""
 }
@@ -135,6 +147,7 @@ shoot_life={
 2d_physics/layer_6="life"
 2d_physics/layer_7="enemy_bulets"
 2d_physics/layer_8="items"
+2d_physics/layer_9="immaterial_ennemies"
 
 [physics]
 

@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://PoisonNova.gd" type="Script" id=1]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 201.468
+height = 488.027
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 202.917
+height = 495.001
+
+[node name="PoisonNova" type="KinematicBody2D"]
+collision_layer = 256
+collision_mask = 0
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+show_behind_parent = true
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="PoisonShape" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PoisonShape"]
+self_modulate = Color( 0, 0.603922, 0.164706, 1 )
+rotation = 1.5708
+shape = SubResource( 2 )
+
+[connection signal="body_entered" from="PoisonShape" to="." method="_on_PoisonShape_body_entered"]
+[connection signal="body_exited" from="PoisonShape" to="." method="_on_PoisonShape_body_exited"]
