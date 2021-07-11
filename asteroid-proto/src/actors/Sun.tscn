@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://src/actors/Sun.gd" type="Script" id=1]
-[ext_resource path="res://assets/soleilmechant1.png" type="Texture" id=2]
+[ext_resource path="res://assets/characters/soleilmechant1.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 117.917
@@ -37,5 +37,5 @@ position = Vector2( 117.422, 0 )
 [connection signal="die" from="." to="." method="_on_Enemy_die"]
 [connection signal="body_entered" from="CollisionsDetector" to="." method="_on_CollisionsDetector_body_entered"]
 [connection signal="body_entered" from="CollisionsDetector" to="." method="_on_BulletDetector_body_entered"]
-[connection signal="body_shape_entered" from="CollisionsDetector" to="." method="_on_CollisionsDetector_body_shape_entered"]
 [connection signal="body_shape_entered" from="CollisionsDetector" to="." method="_on_BulletDetector_body_shape_entered"]
+[connection signal="body_shape_entered" from="CollisionsDetector" to="." method="_on_CollisionsDetector_body_shape_entered"]

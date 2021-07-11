@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://assets/planetNormaleVivante.png" type="Texture" id=1]
+[ext_resource path="res://assets/characters/planetNormaleVivante.png" type="Texture" id=1]
 [ext_resource path="res://src/actors/Planet.gd" type="Script" id=2]
-[ext_resource path="res://assets/planetNormale1.png" type="Texture" id=3]
+[ext_resource path="res://assets/characters/planetNormale1.png" type="Texture" id=3]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
