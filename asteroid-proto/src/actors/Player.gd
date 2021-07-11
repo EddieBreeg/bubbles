@@ -60,14 +60,14 @@ func _physics_process(_delta: float) -> void:
 		var shoot_instance = shoot_rock.instance()
 		shoot_instance.position = get_global_position()
 		print(projection)
-		shoot_instance.velocity = projection * velocity
+		shoot_instance.velocity = projection * (mousePos - position).normalized()
 		shoot_instance.rotation = get_angle_to(mousePos)
 		get_parent().add_child(shoot_instance)
 	if Input.is_action_just_pressed("shoot_life") and life_count:
 		life_count -= 1
 		var shoot_instance = shoot_life.instance()
 		shoot_instance.position = get_global_position()
-		shoot_instance.velocity = velocity
+		shoot_instance.velocity = projection * (mousePos - position).normalized()
 		shoot_instance.rotation = get_angle_to(get_global_mouse_position())
 		get_parent().add_child(shoot_instance)
 
