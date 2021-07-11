@@ -19,6 +19,6 @@ func _load_level():
 	add_child(level)
 	
 func _load_tutorial():
-	level = preload("res://src/scenes/tutorial.tscn").instance()
+	level = preload("res://src/scenes/Tutorial.tscn").instance()
 	remove_child(menu)
 	add_child(level)
