@@ -18,7 +18,7 @@ animations = [ {
 } ]
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 239.598
+radius = 244.623
 
 [node name="Planet" type="KinematicBody2D"]
 collision_layer = 8
