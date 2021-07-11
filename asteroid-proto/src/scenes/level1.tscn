@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://src/actors/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/actors/Sun.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://src/scenes/level.gd" type="Script" id=7]
 [ext_resource path="res://src/Background.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/items/Rocks.tscn" type="PackedScene" id=9]
+[ext_resource path="res://assets/BG/borders1.png" type="Texture" id=10]
 
 [node name="level1" type="Node2D"]
 script = ExtResource( 7 )
@@ -257,3 +258,104 @@ position = Vector2( 54.4326, -4246.67 )
 
 [node name="Rocks6" parent="." instance=ExtResource( 9 )]
 position = Vector2( 4012.11, -5635.67 )
+
+[node name="Border" type="Sprite" parent="."]
+position = Vector2( -16356.3, -3393.06 )
+texture = ExtResource( 10 )
+offset = Vector2( 5992.91, 4433.92 )
+
+[node name="Border2" type="Sprite" parent="."]
+position = Vector2( -15721.9, -7624.9 )
+rotation = 0.127806
+texture = ExtResource( 10 )
+offset = Vector2( 5992.91, 4433.92 )
+
+[node name="Border3" type="Sprite" parent="."]
+position = Vector2( -9937.58, -13333.1 )
+rotation = 0.830777
+texture = ExtResource( 10 )
+offset = Vector2( 5992.91, 4433.92 )
+
+[node name="Border4" type="Sprite" parent="."]
+position = Vector2( -1793.89, -13409.2 )
+rotation = 1.53938
+texture = ExtResource( 10 )
+offset = Vector2( 5992.91, 4433.92 )
+
+[node name="Border5" type="Sprite" parent="."]
+position = Vector2( 1783.24, -13409.2 )
+rotation = 1.56716
+texture = ExtResource( 10 )
+offset = Vector2( 5992.91, 4433.92 )
+
+[node name="Border6" type="Sprite" parent="."]
+position = Vector2( 4713.45, -13333.1 )
+rotation = 1.56716
+texture = ExtResource( 10 )
+offset = Vector2( 5992.91, 4433.92 )
+
+[node name="Border7" type="Sprite" parent="."]
+position = Vector2( 8785.29, -12343.7 )
+rotation = 1.75138
+texture = ExtResource( 10 )
+offset = Vector2( 5992.91, 4433.92 )
+
+[node name="Border8" type="Sprite" parent="."]
+position = Vector2( 12134.1, -10669.3 )
+rotation = 1.92017
+texture = ExtResource( 10 )
+offset = Vector2( 5992.91, 4433.92 )
+
+[node name="Border9" type="Sprite" parent="."]
+position = Vector2( 12781, -432.576 )
+rotation = 3.10502
+texture = ExtResource( 10 )
+offset = Vector2( 5992.91, 4433.92 )
+
+[node name="Border10" type="Sprite" parent="."]
+position = Vector2( 10688, 4133.98 )
+rotation = 3.43834
+texture = ExtResource( 10 )
+offset = Vector2( 5992.91, 4433.92 )
+
+[node name="Border11" type="Sprite" parent="."]
+position = Vector2( 9812.76, 7064.19 )
+rotation = 3.43834
+texture = ExtResource( 10 )
+offset = Vector2( 5992.91, 4433.92 )
+
+[node name="Border12" type="Sprite" parent="."]
+position = Vector2( 5474.54, 11174.1 )
+rotation = 3.86977
+texture = ExtResource( 10 )
+offset = Vector2( 5992.91, 4433.92 )
+
+[node name="Border13" type="Sprite" parent="."]
+position = Vector2( -2174.44, 11174.1 )
+rotation = 4.62555
+texture = ExtResource( 10 )
+offset = Vector2( 5992.91, 4433.92 )
+
+[node name="Border14" type="Sprite" parent="."]
+position = Vector2( -5371.03, 11706.9 )
+rotation = 4.62555
+texture = ExtResource( 10 )
+offset = Vector2( 5992.91, 4433.92 )
+
+[node name="Border15" type="Sprite" parent="."]
+position = Vector2( -9062.33, 11554.6 )
+rotation = 4.71733
+texture = ExtResource( 10 )
+offset = Vector2( 5992.91, 4433.92 )
+
+[node name="Border16" type="Sprite" parent="."]
+position = Vector2( -13666.9, 8586.37 )
+rotation = 5.14811
+texture = ExtResource( 10 )
+offset = Vector2( 5992.91, 4433.92 )
+
+[node name="Border17" type="Sprite" parent="."]
+position = Vector2( -16368.8, 5047.3 )
+rotation = 5.46277
+texture = ExtResource( 10 )
+offset = Vector2( 5992.91, 4433.92 )
