@@ -22,7 +22,7 @@ func _process(delta):
 func _take_damage(n: int) -> void:
 	var player = get_parent().get_node('Player')
 	if(player):
-		player._update_score(-n if hp < max_hp else 0)
+		player._update_score(-n if planet_hp < planet_max_hp else 0)
 		planet_hp = planet_hp - n if (planet_hp-n)>0 else 0
 		planet_hp = planet_hp if planet_hp < planet_max_hp else planet_max_hp
 		if not planet_hp:

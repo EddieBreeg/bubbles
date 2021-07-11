@@ -8,7 +8,7 @@ var rotation_dir = 0
 
 var nova_speed = Vector2(200,200)
 
-var rate_of_fire = 20
+var rate_of_fire = 15
 var can_fire = true
 
 

@@ -22,3 +22,10 @@ func _force_on(target: PhysicsBody2D) -> Vector2:
 	if d > max_distance:
 		return Vector2.ZERO
 	return v * (target.mass*baseStrength/(d*d))
+		
+
+
+func _on_BlackholeAtmosphere_body_entered(body):
+	print("Enter blackhole atmosphere")
+	if(body.is_in_group("Player")):
+		body._die()
