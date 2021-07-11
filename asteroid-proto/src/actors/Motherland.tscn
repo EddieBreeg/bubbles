@@ -5,7 +5,7 @@
 [ext_resource path="res://src/Aura.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 477.048
+radius = 496.048
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 708.725

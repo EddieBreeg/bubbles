@@ -1,12 +1,18 @@
 extends Actor
 class_name Planet
 
+var isAlive = false
+export var rotationSpeed = .1
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	self.add_to_group('Planet')
 
 func _on_Planet_die():
 	queue_free()
+func _process(delta):
+	if isAlive:
+		rotation += delta * rotationSpeed
 
 func _take_damage(n: int) -> void:
 	var player = get_parent().get_node('Player')
@@ -17,8 +23,10 @@ func _take_damage(n: int) -> void:
 		if not hp:
 			emit_signal('die')
 		elif(hp < max_hp):
+			isAlive = false
 			get_node("AnimatedSprite").play("default")
 		else:
+			isAlive = true
 			get_node("AnimatedSprite").play("life")
 			
 

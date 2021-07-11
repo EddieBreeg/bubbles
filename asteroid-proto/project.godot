@@ -14,12 +14,17 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/actors/Actor.gd"
 }, {
+"base": "Enemy",
+"class": "Blackhole",
+"language": "GDScript",
+"path": "res://src/actors/Blackhole.gd"
+}, {
 "base": "Projectile",
 "class": "BulletStone",
 "language": "GDScript",
 "path": "res://src/projectiles/BulletStone.gd"
 }, {
-"base": "KinematicBody2D",
+"base": "Actor",
 "class": "Enemy",
 "language": "GDScript",
 "path": "res://src/actors/Enemy.gd"
@@ -43,15 +48,28 @@ _global_script_classes=[ {
 "class": "Projectile",
 "language": "GDScript",
 "path": "res://src/projectiles/Projectile.gd"
+}, {
+"base": "Enemy",
+"class": "Sun",
+"language": "GDScript",
+"path": "res://src/actors/Sun.gd"
+}, {
+"base": "Node2D",
+"class": "level",
+"language": "GDScript",
+"path": "res://src/scenes/level.gd"
 } ]
 _global_script_class_icons={
 "Actor": "",
+"Blackhole": "",
 "BulletStone": "",
 "Enemy": "",
 "EnemyBullet": "",
 "Planet": "",
 "Player": "",
-"Projectile": ""
+"Projectile": "",
+"Sun": "",
+"level": ""
 }
 
 [application]
@@ -115,6 +133,7 @@ shoot_life={
 [physics]
 
 common/enable_pause_aware_picking=true
+2d/default_gravity=0
 
 [rendering]
 
