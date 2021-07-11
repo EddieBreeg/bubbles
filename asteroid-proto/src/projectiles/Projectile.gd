@@ -11,10 +11,13 @@ var life_time = 3
 func _ready():
 	velocity += projectile_speed*Vector2(1,0).rotated(rotation)
 	apply_impulse(Vector2(), velocity)
+	get_node("AnimatedSprite").play("default")
 	self_destruct()
 
 func self_destruct():
 	yield(get_tree().create_timer(life_time), "timeout")
+	get_node("AnimatedSprite").play("end")
+	yield(get_tree().create_timer(0.5), "timeout")
 	queue_free()
 	
 func _on_Projectile_body_entered(body: Node) -> void:
